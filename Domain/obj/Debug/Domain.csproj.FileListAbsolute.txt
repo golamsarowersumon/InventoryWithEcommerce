@@ -1,0 +1,565 @@
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\Domain.dll.config
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\Domain.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\Domain.pdb
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\EntityFramework.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\EntityFramework.xml
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.pdb
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+F:\Z And Z Solution\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Inventory Management System\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.Initialcreate.resources
+C:\Users\netsh\Desktop\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.updateTMTDTEMP.resources
+C:\Users\User\Desktop\18.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.updateTMTDTEMP1.resources
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate1.resources
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Domain.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Owin.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateEmail.resources
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateEmail1.resources
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateEmail11.resources
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate1.resources
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate2.resources
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate3.resources
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.addStore.resources
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Domain\obj\Debug\Domain.Migrations.addViewMessage.resources
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.UpdatePendinRecive.resources
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\User\Desktop\25.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateRightOfAccess.resources
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateTable.resources
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Domain\obj\Debug\Domain.Migrations.update.resources
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate1.resources
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate2.resources
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\28.05.2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\30.05.19\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.upto.resources
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Domain\obj\Debug\Domain.Migrations.updatetransferby.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate1.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upRightOfAccess.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upLayer.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upLayer1.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.Update.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateStoreassign.resources
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.Cache
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.InitialCreate1.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upRightOfAccess.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upLayer.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.upLayer1.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.Update.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.Migrations.UpdateStoreassign.resources
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Domain.dll.config
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Domain.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Domain.pdb
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Owin.dll
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\Inventory\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.init.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.second.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.third.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.fourth.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.custregister.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.custregister1.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.ecom.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.ecommerce.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.salessetup.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.dll
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.pdb
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.Migrations.salessetup2.resources
+C:\Users\User\Desktop\Inventory\Domain\obj\Debug\Domain.csprojAssemblyReference.cache

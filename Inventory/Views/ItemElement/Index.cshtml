@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Domain.ViewModels.ItemElementViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemElementId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemElementName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubSubCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubSubSubCategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemElementId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemElementName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubSubCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubSubSubCategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ItemElementId }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.ItemElementId  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ItemElementId  })
+        </td>
+    </tr>
+}
+
+</table>

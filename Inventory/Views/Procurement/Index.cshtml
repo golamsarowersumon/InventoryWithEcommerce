@@ -1,0 +1,1054 @@
+﻿
+
+@{
+
+    ViewBag.Title = "Index";
+}
+
+
+<div class="modal fade" id="modal-animation-3" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated zoomInUp">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="purchaseRemove()" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-animation-2" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated zoomInUp">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body2">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-uppercase">Procurement Process</div>
+            <div class="card-body">
+                <div class="form-group row" style="margin-bottom:5px;">
+                    <label class="col-sm-2 col-form-label FS11">Procurement Type</label>
+                    <div class="col-sm-4">
+                        <select id="ddlprocurement" class="form-control">
+                            <option value="">select Procurement Type</option>
+                        </select>
+                        <p class="procutype" style="color:#f50909"></p>
+                    </div>
+                    <label class="col-sm-2 col-form-label FS11">Receive Date</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control" id="receivedate">
+                        <p class="recdate" style="color:#f50909"></p>
+                    </div>
+                </div>
+                <div class="form-group row" style="margin-bottom:5px;">
+                    <label class="col-sm-2 col-form-label FS11">Supplier Name</label>
+                    <div class="col-sm-4">
+                        <select id="ddlSupplier" class="form-control">
+                            <option value="">select Supplier Name</option>
+                        </select>
+                        <p class="suppname" style="color:#f50909"></p>
+                    </div>
+
+                    <label class="col-sm-2 col-form-label FS11">Procure Date</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control" id="prouredate">
+                        <p class="procuredate" style="color:#f50909"></p>
+                    </div>
+
+                </div>
+                <div class="form-group row" style="margin-bottom:5px;">
+
+                    <label class="col-sm-2 col-form-label FS11">Sub Contac Name</label>
+                    <div class="col-sm-4">
+                        <select id="ddlsubcontact" class="form-control">
+                            <option>select Sub Contac Name</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header text-uppercase">Item Ariea</div>
+                            <div class="card-body">
+
+                                <div class="col-lg-4">
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Item</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <select id="ddlitem" class="form-control">
+                                                    <option value="">Select Item</option>
+                                                </select>
+                                                <p class="itmid" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Quantity</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="number" id="txtqty" class="form-control" />
+                                                <p class="qtyid" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Purchase Price</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="number" id="txtprice" class="form-control" />
+                                                <p class="pricecheck" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Sales Price</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="number" id="txtsalesprice" class="form-control" />
+                                                <p class="saleprice" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Country</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <select id="ddlcountry" class="form-control">
+                                                    <option> Select Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Principal</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <select id="ddlprincipalname" class="form-control">
+                                                    <option>Select Principal</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Condition Of Item</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <select id="ddlitemcondition" class="form-control">
+                                                    <option value="">Condition Of Item</option>
+                                                </select>
+                                                <p class="conofitem" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Warranty Period</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <select id="ddlwareentyperiod" class="form-control">
+                                                    <option> Select Principal</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Expire Date</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="date" id="expiredate" class="form-control" />
+                                                <p class="expdate" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-8">
+
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Unique Number</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="text" id="itemuniquenumber" class="form-control datepicker" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Chesis Number</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="text" id="txtChesisnumber" class="form-control datepicker" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Engine Number</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="text" id="txtengnumber" class="form-control datepicker" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Next Maintanance Date</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="date" id="maintancedate" class="form-control datepicker" />
+                                                <p class="nextmdate" style="color:#f50909"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group row" style="margin-bottom:5px;">
+                                            <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Bar Code</label>
+                                            <div class="col-sm-8 col-md-8">
+                                                <input type="text" id="txtbarcode" class="form-control datepicker" />
+                                            </div>
+
+                                            <input type="text" id="grandtotal" hidden />
+                                            <input type="text" id="txtcat" hidden />
+                                            <input type="text" id="txtSubcat" hidden />
+                                            <input type="text" id="txtSubSubcat" hidden />
+                                            <input type="text" id="txtSubSubSubcat" hidden />
+                                            <input type="text" id="txtSubSubSubSubcat" hidden />
+                                            <input type="text" id="txtbrand" hidden />
+                                            <input type="text" id="txtmodel" hidden />
+                                            <input type="text" id="txtmethodid" hidden />
+                                            <input type="text" id="txtunittypeid" hidden />
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-8">
+                                            <div class="row">
+                                                <div class="">
+                                                    <input id="isnew" type="checkbox" checked />
+
+                                                    <label for="success" style="font-size:18px;color:forestgreen">Is New</label>
+                                                </div>
+                                                <div class="" style="margin-left:10px">
+                                                    <input type="checkbox" id="ishot">
+                                                    <label for="info" style="font-size:18px;color:red">Is Hot</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group row" style="margin-bottom:5px;">
+                                                <label class="col-sm-4 col-md-4 col-form-label"></label>
+                                                <div class="col-sm-8 col-md-8">
+                                                    <button type="button" onclick="addToCart()" class="btn btn-primary px-5">Add</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="card-header">Chart</div>
+                                    <div class="table-responsive" style="height:150px">
+
+                                        <table class="table table-bordered" id="tbl">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item Name</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                    <th>Sub-Total</th>
+                                                    <th>Option</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tblbody" style="text-align:center;visibility:hidden;"></tbody>
+                                            <tfoot>
+                                                <tr style="text-align:right">
+                                                    <th colspan="3" style="text-align:right">Total</th>
+                                                    <th id="total" style="text-align:right"></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer pull-right">
+                    <button type="submit" id="btnrefress" class="btn btn-danger"><i class="fa fa-times"></i> CANCEL</button>
+                    <button type="submit" id="btnsave" class="btn btn-success"><i class="fa fa-check-square-o"></i> SAVE</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            loadProcurementType();
+            loadSupplier();
+            //loalStore();
+            LoadItem();
+            LoadItemCondition();
+            LoadWarrantyperiod();
+            LoadCountry();
+
+
+            $("#btnrefress").click(function () {
+
+                location.reload(true);
+                localStorage.clear();
+            });
+
+
+
+        });
+
+
+
+        function loadProcurementType() {
+            $.ajax({
+
+                url: "/Procurement/ProcureType",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlprocurement").append("<option value=" + data[i].ProcurementTypeId + ">" + data[i].ProcurementTypeName + "</option>")
+
+
+
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+
+        function loadSupplier() {
+            $.ajax({
+
+                url: "/Procurement/supplierCompany",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlSupplier").append("<option value=" + data[i].SupplierCompanyId + ">" + data[i].SupplierCompanyName + "</option>"),
+                            $("#ddlsubcontact").append("<option value=" + data[i].SupplierCompanyId + ">" + data[i].SupplierCompanyName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        //function loalStore() {
+        //    $.ajax({
+
+        //        url: "/Procurement/Storeshow",
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            for (var i = 0; i < data.length; i++) {
+
+        //                $("#ddlstore").append("<option value=" + data[i].StoreId + ">" + data[i].StoreName + "</option>")
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+
+        //}
+
+        //$("#ddlstore").change(function () {
+
+
+
+        //    var suid = $(this).val();
+        //    $.ajax({
+
+        //        url: "/Procurement/SubStoreshow?id=" + suid,
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#ddlsubstore").empty().append("<option value=''>Select Sub Store</option>")
+        //            for (var i = 0; i < data.length; i++) {
+
+        //                $("#ddlsubstore").append("<option value=" + data[i].SubStoreId + ">" + data[i].SubStoreName + "</option>")
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //})
+
+
+        //$("#ddlsubstore").change(function () {
+        //    var suid = $(this).val();
+        //    $.ajax({
+
+        //        url: "/Procurement/SubSubStoreshow?id=" + suid,
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#ddlsubsubstore").empty().append("<option>Select Sub Sub Store</option>")
+        //            for (var i = 0; i < data.length; i++) {
+
+        //                $("#ddlsubsubstore").append("<option value=" + data[i].SubSubStoreId + ">" + data[i].SubSubStoreName + "</option>")
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //})
+
+        //$("#ddlsubsubstore").change(function () {
+        //    var suid = $(this).val();
+        //    $.ajax({
+
+        //        url: "/Procurement/SubSubSubStoreshow?id=" + suid,
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#ddlsubsubsubstore").empty().append("<option>Select Sub Sub Sub Store</option>")
+        //            for (var i = 0; i < data.length; i++) {
+
+        //                $("#ddlsubsubsubstore").append("<option value=" + data[i].SubSubSubStoreId + ">" + data[i].SubSubSubStoreName + "</option>")
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //})
+
+
+        //$("#ddlsubsubsubstore").change(function () {
+        //    var suid = $(this).val();
+        //    $.ajax({
+
+        //        url: "/Procurement/SubSubSubSubStoreshow?id=" + suid,
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#ddlsubsubsubsubstore").empty().append("<option>Select Sub Sub Sub Sub Store</option>")
+        //            for (var i = 0; i < data.length; i++) {
+
+        //                $("#ddlsubsubsubsubstore").append("<option value=" + data[i].SubSubSubSubStoreId + ">" + data[i].SubSubSubSubStoreName + "</option>")
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //})
+
+
+
+        function LoadItem() {
+            $.ajax({
+
+                url: "/Procurement/Itemshow",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlitem").append("<option value=" + data[i].ItemId + ">" + data[i].ItemName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+
+        $("#ddlitem").change(function () {
+            var itemid = ($(this).val());
+
+            $.ajax({
+                url: "/Procurement/itemwisecatagory?id=" + itemid,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#txtcat").val("");
+                    $("#txtSubcat").val("");
+                    $("#txtSubSubcat").val("");
+                    $("#txtSubSubSubcat").val("");
+                    $("#txtSubSubSubSubcat").val("");
+                    $("#txtunittypeid").val("");
+                    $("#txtbrand").val("");
+                    $("#txtmodel").val("");
+
+                    $("#txtcat").val(data.CategoryId);
+                    $("#txtSubcat").val(data.SubCategoryId);
+                    $("#txtSubSubcat").val(data.SubSubCategoryId);
+                    $("#txtSubSubSubcat").val(data.SubSubSubCategoryId);
+                    $("#txtSubSubSubSubcat").val(data.SubSubSubSubCategoryId);
+                    $("#txtunittypeid").val(data.UnitId);
+                    $("#txtmethodid").val(data.MethodId);
+                    $("#txtbrand").val(data.BrandId);
+                    $("#txtmodel").val(data.ModelId);
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+        function LoadCountry() {
+            $.ajax({
+
+                url: "/Procurement/CountryShow",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlcountry").append("<option value=" + data[i].CountryId + ">" + data[i].CountryName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+        $("#ddlcountry").change(function () {
+            var id = $(this).val();
+            $.ajax({
+
+                url: "/Procurement/loadPrincipalbycountry?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#ddlprincipalname").empty().append("<option>Select Principal Name</option>")
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlprincipalname").append("<option value=" + data[i].Principle_id + ">" + data[i].Principle_name + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+
+        function LoadItemCondition() {
+            $.ajax({
+
+                url: "/Procurement/Conditionofitemshow",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlitemcondition").append("<option value=" + data[i].ConditionOfItemId + ">" + data[i].ConditionOfItemName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        function LoadWarrantyperiod() {
+            $.ajax({
+
+                url: "/Procurement/Warrantyperiod",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlwareentyperiod").append("<option value=" + data[i].WarrantyId + ">" + data[i].WarrantyName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        function validateForm() {
+            var Itemid = $("#ddlitem").val();
+            var qty = $("#txtqty").val();
+            var price = $("#txtprice").val();
+            var salesprice = $("#txtsalesprice").val();
+            var dateofexpire = $("#expiredate").val();
+            var conditionofitemid = $("#ddlitemcondition").val();
+            var dateofmaintance = $("#maintancedate").val();
+
+
+            var inputVal = new Array(Itemid, qty, price, salesprice, conditionofitemid, dateofexpire, dateofmaintance);
+            console.log(inputVal);
+            var inputMessage = new Array("Item", "Quantity", "Price", "Sales Price", "ConditionOfItem", "DateOfExpire", "Next Maintance Date");
+
+            $('.error').hide();
+
+            if (inputVal[0] == "") {
+                $('.itmid').after('<span class="error"> Please enter' + inputMessage[0] + '</span>');
+                return false;
+            }
+            //else if(!nameReg.test(names)){
+            //    $('.itmid').after('<span class="error"> Letters only</span>');
+            //}
+
+            if (inputVal[1] == "") {
+                $('.qtyid').after('<span class="error"> Please enter' + inputMessage[1] + '</span>');
+                return false;
+            }
+
+            if (inputVal[2] == "") {
+                $('.pricecheck').after('<span class="error"> Please enter' + inputMessage[2] + '</span>');
+                return false;
+            }
+            if (inputVal[3] == "") {
+                $('.saleprice').after('<span class="error"> Please enter' + inputMessage[3] + '</span>');
+                return false;
+
+            }
+            if (inputVal[4] == "") {
+                $('.conofitem').after('<span class="error"> Please enter' + inputMessage[3] + '</span>');
+                return false;
+
+            }
+            if (inputVal[5] == "") {
+                $('.expdate').after('<span class="error"> Please enter' + inputMessage[4] + '</span>');
+                return false;
+            }
+            if (inputVal[6] == "") {
+                $('.nextmdate').after('<span class="error"> Please enter' + inputMessage[5] + '</span>');
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+
+        var cart = [];
+        $(function () {
+            if (localStorage.cart) {
+                cart = JSON.parse(localStorage.cart);
+                showCart();
+            }
+        });
+
+
+        function addToCart() {
+
+            if (validateForm()) {
+
+
+
+                var Itemname = $("#ddlitem option:selected").text();
+                var Itemid = $("#ddlitem option:selected").val();
+                var catid = $("#txtcat").val();
+                var subcatid = $("#txtSubcat").val();
+                var subsubcatid = $("#txtSubSubcat").val();
+                var subsubsubcatid = $("#txtSubSubSubcat").val();
+                var subsubsubsubcatid = $("#txtSubSubSubSubcat").val();
+                var methodid = $("#txtmethodid").val();
+                var unitid = $("#txtunittypeid").val();
+                var qty = $("#txtqty").val();
+                var price = $("#txtprice").val();
+                var salesprice = $("#txtsalesprice").val();
+                var dateofexpire = $("#expiredate").val();
+                var dateofmaintance = $("#maintancedate").val();
+                var barcode = $("#txtbarcode").val();
+                var itemuniquenumber = $("#itemuniquenumber").val();
+                var chesisnumber = $("#txtChesisnumber").val();
+                var countryid = $("#ddlcountry option:selected").val();
+                var principalid = $("#ddlprincipalname option:selected").val();
+                var conditionofitemid = $("#ddlitemcondition option:selected").val();
+                var warrientyid = $("#ddlwareentyperiod option:selected").val();
+                var enginenumber = $("#txtengnumber").val();
+
+                var brandid = $("#txtbrand").val();
+                var modelid = $("#txtmodel").val();
+
+                var isnewitem;
+                var ishotitem;
+                if ($('#isnew').is(":checked")) {
+                    isnewitem = true;
+                } else {
+                    isnewitem = false;
+                }
+                if ($('#ishot').is(":checked")) {
+                    ishotitem = true;
+                } else {
+                    ishotitem = false;
+                }
+
+
+
+                // update qty if product is already present
+                for (var i in cart) {
+                    if (cart[i].ItemName == Itemname) {
+                        cart[i].Qtd = qty;
+                        cart[i].Price = price;
+                        showCart();
+                        saveCart();
+                        return;
+                    }
+                }
+                // create JavaScript Object
+                var item = {
+                    ItemName: Itemname, ItemId: Itemid, CatId: catid, SubcatId: subcatid,
+                    SubSubcatId: subsubcatid, SubSubSubcatId: subsubsubcatid, SubSubSubSubcatId: subsubsubsubcatid, MethodId: methodid,
+                    UnitId: unitid, Qtd: qty, Price: price, Saleprice: salesprice, Subtotal: price * qty, DateOfExpire: dateofexpire,
+                    DateOfMaintance: dateofmaintance, Barcode: barcode, ItemUniqueNum: itemuniquenumber, ChesisNumber: chesisnumber, EngineNumber: enginenumber,
+                    CountryId: countryid, PrincipalId: principalid, ConditionOfItem: conditionofitemid, WarrentyId: warrientyid, IsNew: isnewitem, IsHot: ishotitem,
+                    BrandId: brandid, ModelId: modelid
+                };
+                cart.push(item);
+                saveCart();
+                showCart();
+            }
+
+        }
+
+
+        function deleteItem(index) {
+            cart.splice(index, 1); // delete item at index
+            showCart();
+            saveCart();
+        }
+
+
+        function saveCart() {
+            if (window.localStorage) {
+                localStorage.cart = JSON.stringify(cart);
+                clear();
+            }
+        }
+
+        function showCart() {
+            if (cart.length == 0) {
+                $("#tblbody").css("visibility", "hidden");
+                return;
+            }
+            console.log(cart);
+
+            $("#tblbody").css("visibility", "visible");
+
+            $("#tblbody").empty();
+
+            var sum = 0;
+            for (var i in cart) {
+
+                var item = cart[i];
+                sum += item.Qtd * item.Price
+                $("#total").text(sum);
+                $("#grandtotal").val(sum);
+
+
+
+                var row = "<tr><td>" + item.ItemName + "</td><td>" +
+                    item.Qtd + "</td><td>" + item.Price + "</td><td>"
+                    + item.Subtotal + "</td><td>"
+                    + "<button onclick='deleteItem(" + i + ")'>Remove</button></td></tr>";
+
+                $("#tblbody").append(row);
+
+
+
+
+            }
+
+        }
+
+
+
+        function ProcureValidation() {
+
+            var ProcurementType = $("#ddlprocurement").val();
+            var SupplierCompany = $("#ddlSupplier").val();
+            var DateOfRece = $("#receivedate").val();
+            var DateOfPurch = $("#prouredate").val();
+
+            var inputValpro = new Array(ProcurementType, SupplierCompany, DateOfRece, DateOfPurch);
+            console.log(inputValpro);
+            var inputMessagepro = new Array("Procurement Type", "Supplier Company", "Receive Date", "Procure Date");
+
+            $('.error').hide();
+
+            if (inputValpro[0] == "") {
+                $('.procutype').after('<span class="error"> Please enter' + inputMessagepro[0] + '</span>');
+                return false;
+            }
+            else if (inputValpro[1] == "") {
+                $('.suppname').after('<span class="error"> Please enter' + inputMessagepro[1] + '</span>');
+                return false;
+            }
+
+            else if (inputValpro[2] == "") {
+                $('.recdate').after('<span class="error"> Please enter' + inputMessagepro[2] + '</span>');
+                return false;
+            }
+
+            else if (inputValpro[3] == "") {
+                $('.procuredate').after('<span class="error"> Please enter' + inputMessagepro[3] + '</span>');
+                return false;
+
+            }
+            else {
+                return true;
+            }
+        }
+
+
+
+
+
+        function Add(data) {
+
+            $.ajax({
+
+                url: "/Procurement/Save",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: data,
+                success: function (dat) {
+                    if (dat.isRedirect) {
+                        window.location.href = dat.redirectUrl;
+                    }
+                    else {
+                        $("#modal-animation-3").modal("toggle");
+                        $(".modal-body").html("Procurement Process Successfully Save");
+                    }
+
+                },
+                error: function () {
+
+                }
+
+            });
+        }
+        $("#btnsave").click(function (e) {
+
+            e.preventDefault();
+
+
+            if (ProcureValidation()) {
+
+                var curtarray = [];
+                curtarray.length = 0;
+                $.each(cart, function (i, v) {
+                    curtarray.push({
+                        ItemId: v.ItemId,
+                        CategoryId: v.CatId,
+                        SubCategoryId: v.SubcatId,
+                        SubSubCategoryId: v.SubSubcatId,
+                        SubSubSubCategoryId: v.SubSubSubcatId,
+                        SubSubSubSubCategoryId: v.SubSubSubSubcatId,
+                        UnitId: v.UnitId,
+                        PO_SubTotal: v.Subtotal,
+                        PO_QTD: v.Qtd,
+                        PO_Price: v.Price,
+                        SO_Price: v.Saleprice,
+                        DateOfExpired: v.DateOfExpire,
+                        DateOfNextMaintainance: v.DateOfMaintance,
+                        Barcode: v.Barcode,
+                        Item_Unique_Number: v.ItemUniqueNum,
+                        Chesis_Number: v.ChesisNumber,
+                        Engine_Number: v.EngineNumber,
+                        CountryId: v.CountryId,
+                        Principle_id: v.PrincipalId,
+                        ConditionOfItemId: v.ConditionOfItem,
+                        WarrantyId: v.WarrentyId,
+                        MethodId: v.MethodId,
+                        IsNew: v.IsNew,
+                        IsHot: v.IsHot,
+                        BrandId: v.BrandId,
+                        ModelId: v.ModelId
+
+                    })
+                })
+
+
+
+                var data = JSON.stringify({
+                    ProcurementTypeId: $("#ddlprocurement").val(),
+                    SupplierCompanyId: $("#ddlSupplier").val(),
+                    SubContractCompanyId: $("#ddlsubcontact").val(),
+                    DateOfPurchase: $("#prouredate").val(),
+                    DateOfReceive: $("#receivedate").val(),
+
+                    PO_GRAND_TOTAL: $("#grandtotal").val(),
+
+                    ProcurementDetailsViewModel: curtarray
+                });
+
+
+                if (curtarray.length > 0) {
+                    $.when(Add(data)).then(function (response) {
+                        console.log(response);
+                    }).fail(function (err) {
+                        consol.log(err);
+                    })
+                }
+                else {
+                    $("#modal-animation-2").modal("toggle");
+                    $(".modal-body2").html("<h4>please Fillup Item Ariea</h4>");
+                    //alert("please Fillup Item Ariea");
+
+                }
+            }
+
+
+        })
+
+
+
+        function purchaseRemove() {
+            $("#tblbody").empty();
+            localStorage.clear();
+            location.reload(true);
+        }
+
+        function clear() {
+
+            $("#ddlitem").val("");
+            $("#txtcat").val("");
+            $("#txtSubcat").val("");
+            $("#txtSubSubcat").val("");
+            $("#txtSubSubSubcat").val("");
+            $("#txtSubSubSubSubcat").val("");
+            $("#txtmethodid").val("");
+            $("#txtunittypeid").val("");
+            $("#txtqty").val("");
+            $("#txtprice").val("");
+            $("#txtsalesprice").val("");
+            $("#expiredate").val("");
+            $("#maintancedate").val("");
+            $("#txtbarcode").val("");
+            $("#itemuniquenumber").val("");
+            $("#txtChesisnumber").val("");
+            $("#ddlcountry").val("");
+            $("#ddlprincipalname").val("");
+            $("#ddlitemcondition").val("");
+            $("#ddlwareentyperiod").val("");
+            $("#txtengnumber").val("");
+
+        }
+
+
+    </script>
+
+}
+

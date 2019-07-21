@@ -1,0 +1,243 @@
+﻿
+@{
+    ViewBag.Title = "E_Commerce_Account";
+    Layout = "~/Views/Shared/_InitialLayout.cshtml";
+}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">User Verification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="col-md-8 col-lg-12">
+                    <div class="accordion accordion-portal" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <input class="genric-btn default circle arrow" type="button" value="Sign In" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" />
+
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
+                                <div class="card-body">
+                                    <div class="row gutter-2 mt-2">
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputEmail1">Phone Number</label>
+                                            <input type="tel" class="form-control" id="logphone" maxlength="11">
+                                            <p class="logphoneerr"></p>
+                                            <p class="logphonerange"></p>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="logpassword">
+                                            <p class="logpasserr"></p>
+                                        </div>
+                                        @*<div class="col-12">
+                                                <div class="custom-control custom-switch mb-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                                                </div>
+                                            </div>*@
+                                        <div class="col-12">
+                                            <input type="button" onclick="LogInCustomer()" value="LogIn" class="btn btn-block btn-primary" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <input class="genric-btn default circle arrow" type="button" value="Create Account" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" />
+
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
+                                <div class="card-body">
+                                    <div class="row gutter-2 mt-2">
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputEmail2">Phone Number</label>
+                                            <input type="tel" class="form-control" id="cusphone" maxlength="11">
+                                            <p class="phnrequired"></p>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputEmail2">Email</label>
+                                            <input type="email" class="form-control" id="custemail">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputPassword3">Password</label>
+                                            <input type="password" class="form-control" id="custpassword">
+                                            <p class="passrequired" style="color:#ff0000"></p>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="exampleInputPassword4">Confirm Password</label>
+                                            <input type="password" class="form-control" id="custconpassword">
+                                            <p class="conpassrequired" style="color:#ff0000"></p>
+                                        </div>
+                                        <div class="col-12">
+                                            <input onclick="RegisterCustomer()" class="btn btn-block btn-primary" value="Register" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height:1000px;background-color:#e4cfcf;">
+
+</div>
+
+@section Scripts{
+    
+    <script>
+        $(document).ready(function () {
+            $("#exampleModalCenter").modal("toggle");
+        })
+
+        function loginvalidationform() {
+
+            var customerPhone = $("#logphone").val();
+            var password = $("#logpassword").val();
+
+
+            var inputVal = new Array(customerPhone, password);
+
+            var inputMessage = new Array("Customer Phone Number", "Password");
+
+            $('.error').hide();
+
+            if (inputVal[0] == "") {
+                $('.logphoneerr').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[0] + '</span>');
+                return false;
+            }
+            //else if (inputVal[0] > 10) {
+            //    $('.logphonerange').after('<span class="error" style="color:#f50909">Please input 11 Digit</span>');
+            //    return false;
+            //}
+            if (inputVal[1] == "") {
+                $('.logpasserr').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[1] + '</span>');
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        
+        function LogInCustomer() {
+            if (loginvalidationform()) {
+                var data = {
+
+                    CustomerPhone: $("#logphone").val(),
+                    Password: $("#logpassword").val()
+                }
+                $.ajax({
+                    url: "/CatagorywiseSales/CustomerLogIn",
+                    type: "Post",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    contentType: "application/json"
+                }).done(function (data) {
+                    if (data.success == "Log In Successfull") {
+                        window.location.href = '/CatagorywiseSales/AddCart';
+                    } else {
+                        alert(data.success)
+                    }
+                })
+            }
+
+        }
+
+
+
+        function validateForm() {
+
+            var customerPhone = $("#cusphone").val();
+            var password = $("#custpassword").val();
+            var Confirmpassword = $("#custconpassword").val();
+
+            var inputVal = new Array(customerPhone, password, Confirmpassword);
+
+            var inputMessage = new Array("Customer Phone Number", "Password", "Confirm Password");
+
+            $('.error').hide();
+
+            if (inputVal[0] == "") {
+                $('.phnrequired').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[0] + '</span>');
+                return false;
+            }
+
+
+            if (inputVal[1] == "") {
+                $('.passrequired').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[1] + '</span>');
+                return false;
+            }
+
+            if (inputVal[2] == "") {
+                $('.conpassrequired').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[2] + '</span>');
+                return false;
+            }
+            else if (password != Confirmpassword) {
+                $('.conpassrequired').after('<span class="error" style="color:#f50909">Password Not Match</span>');
+            }
+            else {
+                return true;
+            }
+        }
+
+
+        function RegisterCustomer() {
+
+            if (validateForm()) {
+                var data = {
+
+                    CustomerEmail: $("#custemail").val(),
+                    CustomerPhone: $("#cusphone").val(),
+                    Password: $("#custpassword").val()
+                }
+                $.ajax({
+                    url: "/CatagorywiseSales/CustomerRegister",
+                    type: "Post",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    contentType: "application/json"
+                }).done(function (data) {
+                    if (data.success != null) {
+                        alert(data.success)
+                    } else {
+                        window.location.href = '/CatagorywiseSales/AddCart';
+                       
+                    }
+
+
+
+
+                })
+            }
+
+        }
+
+    </script>
+    
+    
+    
+    }

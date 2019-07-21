@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{151D7E83-5E3E-4739-BE96-6E83C86A8E0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InventoryContext.cs" />
+    <Compile Include="Migrations\201907020624249_init.cs" />
+    <Compile Include="Migrations\201907020624249_init.Designer.cs">
+      <DependentUpon>201907020624249_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907020843279_second.cs" />
+    <Compile Include="Migrations\201907020843279_second.Designer.cs">
+      <DependentUpon>201907020843279_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907030815172_third.cs" />
+    <Compile Include="Migrations\201907030815172_third.Designer.cs">
+      <DependentUpon>201907030815172_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907031034277_fourth.cs" />
+    <Compile Include="Migrations\201907031034277_fourth.Designer.cs">
+      <DependentUpon>201907031034277_fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907100631291_custregister.cs" />
+    <Compile Include="Migrations\201907100631291_custregister.Designer.cs">
+      <DependentUpon>201907100631291_custregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907100659415_custregister1.cs" />
+    <Compile Include="Migrations\201907100659415_custregister1.Designer.cs">
+      <DependentUpon>201907100659415_custregister1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907130608226_e-com.cs" />
+    <Compile Include="Migrations\201907130608226_e-com.Designer.cs">
+      <DependentUpon>201907130608226_e-com.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907130615492_e-commerce.cs" />
+    <Compile Include="Migrations\201907130615492_e-commerce.Designer.cs">
+      <DependentUpon>201907130615492_e-commerce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907160516408_salessetup.cs" />
+    <Compile Include="Migrations\201907160516408_salessetup.Designer.cs">
+      <DependentUpon>201907160516408_salessetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907161202413_salessetup2.cs" />
+    <Compile Include="Migrations\201907161202413_salessetup2.Designer.cs">
+      <DependentUpon>201907161202413_salessetup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApprovalLayer.cs" />
+    <Compile Include="Models\BloodGroup.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Celebration.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ConditionOfItem.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CustomerRegister.cs" />
+    <Compile Include="Models\DamagedItem.cs" />
+    <Compile Include="Models\District.cs" />
+    <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\EducationQualification.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailProvider.cs" />
+    <Compile Include="Models\E_commerceSalesOrderDetails.cs" />
+    <Compile Include="Models\E_commerceSalesOrderMaster.cs" />
+    <Compile Include="Models\Festival.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Hobby.cs" />
+    <Compile Include="Models\InventoryDetail.cs" />
+    <Compile Include="Models\InventoryMaster.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemElement.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Layer.cs" />
+    <Compile Include="Models\LayerAssign.cs" />
+    <Compile Include="Models\MaritalStatus.cs" />
+    <Compile Include="Models\MENUMAIN.cs" />
+    <Compile Include="Models\MENUSUB.cs" />
+    <Compile Include="Models\MENUSUBSUB.cs" />
+    <Compile Include="Models\Method.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Nationality.cs" />
+    <Compile Include="Models\PermanentAddress.cs" />
+    <Compile Include="Models\PhoneProvider.cs" />
+    <Compile Include="Models\PoliceStation.cs" />
+    <Compile Include="Models\PostOffice.cs" />
+    <Compile Include="Models\PressentAddress.cs" />
+    <Compile Include="Models\Principle.cs" />
+    <Compile Include="Models\ProcurementDetails.cs" />
+    <Compile Include="Models\ProcurementMaster.cs" />
+    <Compile Include="Models\ProcurementType.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDetails.cs" />
+    <Compile Include="Models\ProductionDetails.cs" />
+    <Compile Include="Models\ProductionMaster.cs" />
+    <Compile Include="Models\ProfessionInformation.cs" />
+    <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProfileFamilyDetails.cs" />
+    <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\RawMaterials.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\Religion.cs" />
+    <Compile Include="Models\RightOfAcces.cs" />
+    <Compile Include="Models\SafetyStock.cs" />
+    <Compile Include="Models\SalesElementStup.cs" />
+    <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreAssign.cs" />
+    <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\SubContractCompany.cs" />
+    <Compile Include="Models\SubStore.cs" />
+    <Compile Include="Models\SubSubCategory.cs" />
+    <Compile Include="Models\SubSubStore.cs" />
+    <Compile Include="Models\SubSubSubCategory.cs" />
+    <Compile Include="Models\SubSubSubStore.cs" />
+    <Compile Include="Models\SubSubSubSubCategory.cs" />
+    <Compile Include="Models\SubSubSubSubStore.cs" />
+    <Compile Include="Models\SupplierCompany.cs" />
+    <Compile Include="Models\TemporaryTransferInformation.cs" />
+    <Compile Include="Models\TransferDetails.cs" />
+    <Compile Include="Models\TransferMaster.cs" />
+    <Compile Include="Models\TransferOrder.cs" />
+    <Compile Include="Models\TransferType.cs" />
+    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\Upazila.cs" />
+    <Compile Include="Models\Warranty.cs" />
+    <Compile Include="Models\Weather.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
+    <Compile Include="ViewModels\BloodGroupViewModel.cs" />
+    <Compile Include="ViewModels\BrandViewModel.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\CelebrationViewModel.cs" />
+    <Compile Include="ViewModels\CompanyViewModel.cs" />
+    <Compile Include="ViewModels\ConditionOfItemViewModel.cs" />
+    <Compile Include="ViewModels\CountryViewModel.cs" />
+    <Compile Include="ViewModels\CustomerRegisterViewModel.cs" />
+    <Compile Include="ViewModels\DamagedItemViewModel.cs" />
+    <Compile Include="ViewModels\DistrictViewModel.cs" />
+    <Compile Include="ViewModels\DivisionViewModel.cs" />
+    <Compile Include="ViewModels\DropDownViewModel.cs" />
+    <Compile Include="ViewModels\DynamicReportViewModel.cs" />
+    <Compile Include="ViewModels\EducationQualificationViewModel.cs" />
+    <Compile Include="ViewModels\EmailProviderViewModel.cs" />
+    <Compile Include="ViewModels\EmailViewModel.cs" />
+    <Compile Include="ViewModels\E_commerceSalesOrderDetailsViewModel.cs" />
+    <Compile Include="ViewModels\E_commerceSalesOrderMasterViewModel.cs" />
+    <Compile Include="ViewModels\FestivalViewModel.cs" />
+    <Compile Include="ViewModels\GenderViewModel.cs" />
+    <Compile Include="ViewModels\HobbyViewModel.cs" />
+    <Compile Include="ViewModels\InventoryDetailsViewModel.cs" />
+    <Compile Include="ViewModels\InventoryHeaderViewModel.cs" />
+    <Compile Include="ViewModels\ItemElementViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\LanguageViewModel.cs" />
+    <Compile Include="ViewModels\LayerViewModel.cs" />
+    <Compile Include="ViewModels\MaritalStatusViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\MethodViewModel.cs" />
+    <Compile Include="ViewModels\ModelViewModel.cs" />
+    <Compile Include="ViewModels\NationalityViewModel.cs" />
+    <Compile Include="ViewModels\PhoneProviderViewModel.cs" />
+    <Compile Include="ViewModels\PoliceStationViewModel.cs" />
+    <Compile Include="ViewModels\PostOfficeViewModel.cs" />
+    <Compile Include="ViewModels\PrincipleViewModel.cs" />
+    <Compile Include="ViewModels\ProcurementDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ProcurementHeaderViewModel.cs" />
+    <Compile Include="ViewModels\ProcurementShowViewModel.cs" />
+    <Compile Include="ViewModels\ProcurementTypeViewModel.cs" />
+    <Compile Include="ViewModels\ProductDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ProductionDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ProductionMasterViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\ProfessionInformationViewModel.cs" />
+    <Compile Include="ViewModels\ProfileViewModel.cs" />
+    <Compile Include="ViewModels\ProvinceViewModel.cs" />
+    <Compile Include="ViewModels\RawMaterialsViewModel.cs" />
+    <Compile Include="ViewModels\RegionViewModel.cs" />
+    <Compile Include="ViewModels\ReligionViewModel.cs" />
+    <Compile Include="ViewModels\ReportViewModel.cs" />
+    <Compile Include="ViewModels\RequisitionViewModel.cs" />
+    <Compile Include="ViewModels\RightOfAccesViewModel.cs" />
+    <Compile Include="ViewModels\SafetyStockViewModel.cs" />
+    <Compile Include="ViewModels\SalesElementStupViewModel.cs" />
+    <Compile Include="ViewModels\SeasonViewModel.cs" />
+    <Compile Include="ViewModels\StateViewModel.cs" />
+    <Compile Include="ViewModels\StockViewModel.cs" />
+    <Compile Include="ViewModels\StoreAssignViewModel.cs" />
+    <Compile Include="ViewModels\StoreViewModel.cs" />
+    <Compile Include="ViewModels\SubCategoryViewModel.cs" />
+    <Compile Include="ViewModels\SubContractCompanyViewModel.cs" />
+    <Compile Include="ViewModels\SubStoreViewModel.cs" />
+    <Compile Include="ViewModels\SubSubCategoryViewModel.cs" />
+    <Compile Include="ViewModels\SubSubStoreViewModel.cs" />
+    <Compile Include="ViewModels\SubSubSubCategoryViewModel.cs" />
+    <Compile Include="ViewModels\SubSubSubStoreViewModel.cs" />
+    <Compile Include="ViewModels\SubSubSubSubCategoryViewModel.cs" />
+    <Compile Include="ViewModels\SubSubSubSubStoreViewModel.cs" />
+    <Compile Include="ViewModels\SupplierCompanyViewModel.cs" />
+    <Compile Include="ViewModels\TransferDetailsViewModel.cs" />
+    <Compile Include="ViewModels\TransferMasterViewModel.cs" />
+    <Compile Include="ViewModels\TransferOrderViewModel.cs" />
+    <Compile Include="ViewModels\TransferTypeViewModel.cs" />
+    <Compile Include="ViewModels\TransferViewModel.cs" />
+    <Compile Include="ViewModels\UnitViewModel.cs" />
+    <Compile Include="ViewModels\UpazilaViewModel.cs" />
+    <Compile Include="ViewModels\WarrantyViewModel.cs" />
+    <Compile Include="ViewModels\WeatherViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907020624249_init.resx">
+      <DependentUpon>201907020624249_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907020843279_second.resx">
+      <DependentUpon>201907020843279_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907030815172_third.resx">
+      <DependentUpon>201907030815172_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907031034277_fourth.resx">
+      <DependentUpon>201907031034277_fourth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907100631291_custregister.resx">
+      <DependentUpon>201907100631291_custregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907100659415_custregister1.resx">
+      <DependentUpon>201907100659415_custregister1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907130608226_e-com.resx">
+      <DependentUpon>201907130608226_e-com.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907130615492_e-commerce.resx">
+      <DependentUpon>201907130615492_e-commerce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907160516408_salessetup.resx">
+      <DependentUpon>201907160516408_salessetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907161202413_salessetup2.resx">
+      <DependentUpon>201907161202413_salessetup2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

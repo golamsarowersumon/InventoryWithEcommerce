@@ -1,0 +1,381 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-uppercase">Advance Criteria</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-3">
+                                Item
+                                
+                            </label>
+
+                            <div class="col-sm-12 col-md-9" id="itm">
+                                <select id="ddlitem" class="form-control">
+                                    <option value="0">All Item</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                Procure Type
+                               
+                            </label>
+                            <div class="col-sm-12 col-md-7" id="prd">
+                                <select id="ddlprocuretype" class="form-control">
+                                    <option value="">ProcureType</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                From Date
+                            </label>
+                            <div class="col-sm-12 col-md-7">
+                                <input type="date" id="fromdate" class="form-control" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                To Date
+                            </label>
+                            <div class="col-sm-12 col-md-7">
+                                <input type="date" id="todate" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success waves-effect waves-light m-1" onclick="AllProcure()"><i class="fa fa-search"></i>Search</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light m-1" onclick="printContent('box');"> <i class="fa fa-home"></i>Print</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light m-1" onclick="Refres()"><i aria-hidden="true" class="fa fa-window-close"></i>Cancel</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" id="box">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="col-sm-12 col-md-4">
+                    <i class="fa fa-table"></i> Procurement Information
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <div class="search-bar">
+                        <input type="search" id="procuresearch" class="form-control" placeholder="Enter keywords">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <table id="tbl" class="paginated table table-bordered dataTable" role="grid" aria-describedby="default-datatable_info">
+                                    <thead>
+                                        <tr>
+
+                                            <th id="itemname" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Item Name
+                                            </th>
+                                            <th id="procuretype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Procure Type
+                                            </th>
+                                            <th id="procuredate" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Procure Date
+                                            </th>
+                                            <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Unit Type
+                                            </th>
+                                            <th id="quantity" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Quantity
+                                            </th>
+                                            <th id="price" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Price
+                                            </th>
+                                            <th id="itemcondition" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Item Condition
+                                            </th>
+                                            <th id="country" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Country
+                                            </th>
+                                            <th id="suppliercompany" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Suppier Company
+                                            </th>
+                                            <th id="warranty" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Warranty
+                                            </th>
+                                            <th id="expiredate" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                Expire Date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+           
+            procureitemitem();
+            procuretype();
+        })
+
+       
+
+        function procureitemitem() {
+            $.ajax({
+
+                url: "/ProcurementReport/GetProcureitem",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#ddlitem").empty().append("<option value=0>All Item</option>");
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlitem").append("<option value=" + data[i].ItemId + ">" + data[i].ItemName + "</option>")
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+        function procuretype() {
+            $.ajax({
+
+                url: "/ProcurementReport/GetProcureType",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#ddlprocuretype").empty().append("<option value=''>Procure Type</option>");
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlprocuretype").append("<option value=" + data[i].ProcurementTypeId + ">" + data[i].ProcurementTypeName + "</option>")
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+      
+           
+            $("#procuresearch").keyup(function () {
+
+                var valuelength = $("#procuresearch").val().length;
+                console.log(valuelength);
+                if (valuelength >0) {
+                    var value = $(this).val().toLowerCase();
+                   
+                    $("#tbl tbody tr").filter(function () {
+                       
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                } else {
+                    pagination();
+                }
+            });
+       
+
+
+
+
+        function AllProcure() {
+
+            var itemid = $("#ddlitem").val();
+            var itemtypeid = $("#ddlprocuretype").val();
+
+            var fromdate;
+            var todate;
+
+            if ($("#fromdate").val() == "") {
+                fromdate = null;
+            }
+            else {
+                fromdate = $("#fromdate").val();
+            }
+            if ($("#todate").val() == "") {
+                todate = null;
+            }
+            else {
+                todate = $("#todate").val();
+            }
+
+            $.ajax({
+
+                url: "/ProcurementReport/GetProcurement?itemid=" + itemid + "&procuretypeid=" + itemtypeid + "&Fromdate=" + fromdate + "&Todate=" + todate,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+
+                    $("#tbl tbody").empty();
+                    for (var i = 0; i < data.length; i++) {
+
+
+                        var Procuredate;
+                        if (data[i].ProcurementTypeName != null) {
+                            var da = new Date(parseInt(data[i].DateOfPurchase.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            Procuredate = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            Procuredate = null
+                        }
+                        var Expdate;
+                        if (data[i].DateOfExpired != null) {
+                            var da = new Date(parseInt(data[i].DateOfExpired.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            Expdate = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            Expdate = null
+                        }
+
+                        $("#tbl tbody").append("<tr><td id='itemname'>" + data[i].ItemName + "</td><td id='procuretype'>" + data[i].ProcurementTypeName + "</td><td id='procuredate'>" +
+                            Procuredate + "</td><td id='unittype'>" + data[i].UnitName + "</td><td id='quantity'>" + data[i].PO_QTD + "</td><td id='price'>" +
+                            data[i].PO_Price + "</td><td id='itemcondition'>" + data[i].ConditionOfItemName + "</td><td id='country'>" + data[i].CountryName + "</td><td id='suppliercompany'>" +
+                            data[i].SupplierCompanyName + "</td><td id='warranty'>" + data[i].WarrantyName + "</td><td id='expiredate'>" + Expdate + "</td></tr>")
+                    }
+                    pagination();
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+        function pagination() {
+            $('table.paginated').each(function () {
+                var table = $("#tbl")
+                var itemsPerPage = 5;
+                var currentPage = 0;
+                var pages = Math.ceil(table.find("tr:not(:has(th))").length / itemsPerPage);
+                table.bind('repaginate', function () {
+                    if (pages > 1) {
+                        var pager;
+                        if (table.next().hasClass("pager"))
+                            pager = table.next().empty(); else
+                            pager = $('<div class="pager btn-group m-1" style="padding-top: 20px; " align="center"></div>');
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"></span>').text('  First ').bind('click', function () {
+                            currentPage = 0;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light">  Prev </span>').bind('click', function () {
+                            if (currentPage > 0)
+                                currentPage--;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        var startPager = currentPage > 2 ? currentPage - 2 : 0;
+                        var endPager = startPager > 0 ? currentPage + 3 : 5;
+                        if (endPager > pages) {
+                            endPager = pages;
+                            startPager = pages - 5; if (startPager < 0)
+                                startPager = 0;
+                        }
+
+                        for (var page = startPager; page < endPager; page++) {
+                            $('<span id="pg' + page + '" class="' + (page == currentPage ? 'btn btn-outline-success waves-effect waves-light' : 'btn btn-outline-success waves-effect waves-light') + '"></span>').text(page + 1).bind('click', {
+                                newPage: page
+                            }, function (event) {
+                                currentPage = event.data['newPage'];
+                                table.trigger('repaginate');
+                            }).appendTo(pager);
+                        }
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Next  </span>').bind('click', function () {
+                            if (currentPage < pages - 1)
+                                currentPage++;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Last  </span>').bind('click', function () {
+                            currentPage = pages - 1;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        if (!table.next().hasClass("pager"))
+                            pager.insertAfter(table);
+                        //pager.insertBefore(table);
+
+                    }// end table.bind('repaginate', function () { ...
+
+                    table.find(
+                        'tbody tr:not(:has(th))').hide().slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).show();
+                });
+
+                table.trigger('repaginate');
+            });
+        }
+
+
+        function printContent(el) {
+            var restorepage = $('body').html();
+            var printcontent = $('#' + el).clone();
+            $('body').empty().html(printcontent);
+            window.print();
+            $('body').html(restorepage);
+        }
+
+        function Refres() {
+            location.reload();
+        }
+
+
+    </script>
+
+}

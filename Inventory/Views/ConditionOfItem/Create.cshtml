@@ -1,0 +1,42 @@
+﻿@model Domain.ViewModels.ConditionOfItemViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>Condition of Item</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ConditionOfItemName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ConditionOfItemName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ConditionOfItemName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-footer pull-right">
+                            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-danger" })
+                            <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> SAVE</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

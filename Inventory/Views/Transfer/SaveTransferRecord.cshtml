@@ -1,0 +1,701 @@
+﻿
+
+@{
+    ViewBag.Title = "SaveTransferRecord";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    string vMessage = "";
+    if (TempData.ContainsKey("message"))
+    {
+        vMessage = TempData["message"].ToString();
+        <script type="text/javascript">
+            window.onload = function () {
+                showAlert();
+                alert('@TempData["message"]');
+            };
+        </script>
+    }
+
+
+
+}
+        <div class="alert alert-success alert-dismissible" role="alert" id="myAlert" style="display:none;">
+            <button type="button" class="close" id="linkClose">×</button>
+            <div class="alert-icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="alert-message">
+                <span id="AlertMsg"></span>
+            </div>
+        </div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="AvailableQuantity" style="display:none;">
+        <div class="panel panel-success">
+
+            <div class="panel-heading">
+                <div class="panel-title">
+
+                    <p id="AvailableQuantityText"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row" style="margin-top:5px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12">
+        <div class="panel panel-success">
+
+            <div class="panel-heading"><div class="panel-title">Transfer Information</div></div>
+
+            <div class="panel-body">
+
+                @*<div class="row">
+                    <div class="form-group">
+                        <p> @ViewBag.username &nbsp; &nbsp; &nbsp; @ViewBag.uid </p>
+                    </div>
+                </div>*@
+                <div class="row">
+                    <input type="number" id="OrderId" hidden="">
+
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="ToStoreId" class="control-label fontsize">To Store</label>
+
+                            <select class="form-control" id="ToStoreId" disabled="disabled">
+                                <option>Select ToStore Name</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="ItemId" class="control-label fontsize">Item Id</label>
+                            <select class="form-control" id="ItemId" disabled="disabled">
+                                <option>Select Item</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group">
+                            <label class="control-label fontsize" for="TransactionQuantity">
+                                Item Quantity <sup style="color: Red">*</sup>
+                            </label>
+                            <input type="number" name="TransactionQuantity" placeholder="Enter Item Id" id="TransactionQuantity" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="UnitId" class="control-label fontsize">Unit Id</label>
+                            <select class="form-control" id="UnitId" disabled="disabled">
+                                <option>Select Unit</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group">
+                            <label class="control-label fontsize" for="TransferDate">
+                                Transfer Date <sup style="color: Red">*</sup>
+                            </label>
+                            <input type="date" id="TransferDate" class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group">
+                            <label class="control-label fontsize" for="TransferOrderDate">
+                                Transfer Order Date <sup style="color: Red">*</sup>
+                            </label>
+                            <input type="text" id="TransferOrderDate" class="form-control" placeholder="Enter Order Date" disabled="disabled">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+
+                        <div class="form-group">
+                            <label class="control-label fontsize" for="TransferOrderDeliveryDate">
+                                Order Delivery Date <sup style="color: Red">*</sup>
+                            </label>
+                            <input type="text" id="TransferOrderDeliveryDate" class="form-control" placeholder="Enter Order Date" disabled="disabled">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="ConditionOfItemId" class="control-label fontsize">Condition of Item</label>
+                            <select class="form-control" id="ConditionOfItemId" >
+                                <option>Select Condition</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="TransferTypeId" class="control-label fontsize">Transfer Type</label>
+                            <select class="form-control" id="TransferTypeId">
+                                <option>Select TransferType</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        
+
+                            <button type="button" class="btn btn-labeled btn-success" onclick="addToCart()">
+                                <span class="btn-label"><i class="fa fa-plus"></i></span>Add
+                            </button>
+                            <button type="button" class="btn btn-labeled btn-success">
+                                <span class="btn-label"><i class="fa fa-minus"></i></span>Clear
+                            </button>
+
+                      
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none; margin-bottom:10px;" id="AvailableQty">
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+<div class="row" style="margin-top:10px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12">
+        <div class="panel panel-success">
+
+            <div class="panel-heading"><div class="panel-title">Transfer Information</div></div>
+
+            <div class="panel-body">
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped" id="TransferOrderTable">
+                        <thead class="panel-success">
+                            <tr>
+                                <th>OrderId</th>
+                                <th>FromStore</th>
+                                <th>Item Name</th>
+                                <th>Item Quantity</th>
+                                <th>Unit</th>
+                                <th>Transfer Type</th>
+                                <th>Order Date</th>
+                                <th>Delivery Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top:5px;display:none;" id="adtochart">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12">
+        <div class="panel panel-success">
+
+            <div class="panel-heading"><div class="panel-title">Adding History</div></div>
+
+            <div class="panel-body">
+
+
+
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover table-striped" id="tbl" style="text-align:center;">
+                        <thead class="panel-success">
+                            <tr>
+                                @*<th><input type="checkbox" class="allGridCheck"></th>*@
+                                <th class="fontsize">Order Id</th>
+                                <th class="fontsize">To Store</th>
+                                <th class="fontsize">Item Name</th>
+                                <th class="fontsize">Transaction Quantity</th>
+
+                                <th class="fontsize">Unit</th>
+                                <th class="fontsize">Transfer Type</th>
+                                <th class="fontsize">Transfer Date</th>
+                                <th class="fontsize">Transfer Order Date</th>
+
+                                <th class="fontsize">Condition Of Item</th>
+                                <th class="fontsize">Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblbody"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-4 col-md-offset-4" style="text-align:center">
+                        <div class="btn-group">
+                            <button type="button" id="btnsave"  class="btn btn-labeled btn-success">
+                                <span class="btn-label"><i class="fa fa-save"></i></span>Save
+                            </button>
+                            <button type="button" id="btnCancel" class="btn btn-labeled btn-success">
+                                <span class="btn-label"><i class="fa fa-close"></i></span>Cancel
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+              
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/date.format.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <script>
+
+            $(document).ready(function () {
+            
+                localStorage.clear();
+                LoadOderInformation();
+                //LoadItem();
+                //LoadTransferType();
+                //LoadConditionofItem();
+
+
+                $("#linkClose").click(function () {
+                    $('#myAlert').hide('fade');
+                });
+
+
+            });
+
+
+        function showAlert(msg) {
+            $("#myAlert").show('fade');
+            $("#AlertMsg").text(msg);
+            $("#myAlert").css("display", "block");
+            setTimeout(function () {
+                $("#myAlert").hide('fade');
+            }, 2000);
+            return false;
+        }
+
+              function LoadOderInformation() {
+
+              $.ajax({
+                type: "Get",
+                url: '@Url.Action("GetTransferOrderInformation", "TransferOrder")',
+                datatype: JSON,
+
+                  success: function (data) {
+                      if (data.isRedirect) {
+                          window.location.href = data.redirectUrl;
+                      }
+                      else {
+                          $('#TransferOrderTable tbody').empty();
+
+                          $.each(data, function (i, item) {
+                              var da = new Date(parseInt(item.TransferOrderDeliverydate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                              let TDdate = JSON.stringify(da);
+                              TDdate = TDdate.slice(1, 11);
+
+
+                              var dat = new Date(parseInt(item.TransferOrderdate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                              let TOdate = JSON.stringify(dat);
+                              TOdate = TOdate.slice(1, 11);
+                             var rows = "<tr>"
+                                  + "<td>" + item.TransferOrderId + "</td>"
+                                  + "<td>" + item.FromStoreName + "</td>"
+                                  + "<td>" + item.ItemName + "</td>"
+                                  + "<td>" + item.TransactionQuantity + "</td>"
+                                  + "<td>" + item.UnitName + "</td>"
+
+                                  + "<td>" + item.TransferTypeName + "</td>"
+                                 + "<td>" + TOdate + "</td>"
+                                 + "<td>" + TDdate + "</td>"
+
+                                  + "<td>" + "<input type='button' value='select' onclick='AddOrderInformation(" + item.TransferOrderId + ")' class='btn btn-sm btn-primary' />" + "</td>"
+
+                                  + "</tr>";
+                              $('#TransferOrderTable tbody').append(rows);
+                          });
+
+                      }
+
+                   
+                },
+                error: function (data) { }
+            });
+
+        }
+
+
+
+        // Binding All information into Textbox, Dropdown etc according to the user selected rows. Using the OrderId to get all Information of that Order.
+          function AddOrderInformation(id) {
+            var Orderid = id;
+
+            //var rowCount = $('#OrderTable >tbody >tr').length;
+            //alert(rowCount);
+
+              if (Orderid) {
+                    $.ajax({
+                        type: "Post",
+                        url: '@Url.Action("GetOrderInfo", "TransferOrder")',
+                        data: {
+                            TransferOrderId: Orderid
+                        },
+
+                        success: function (data) {
+                            console.log(data);
+
+                            $('#ToStoreId').empty();
+                            $('#ToSubStoreId').empty();
+                          
+                            $('#TransferTypeId').empty();
+                            $('#UnitId').empty();
+                            $('#TransactionQuantity').val(" ");
+                           $('#TransferOrderDate').val("");
+                            $('#TransferOrderDeliveryDate').val("");
+                            $("#ItemId").empty();
+                            $("#ConditionOfItemId").empty();
+
+                            $.each(data, function (key, value) {
+                                var da = new Date(parseInt(value.TransferOrderDeliverydate.replace("/Date(", "").replace(")/", ""), 10));
+                                let TDdate = JSON.stringify(da);
+                                TDdate = TDdate.slice(1, 11);
+                                var dab = new Date(parseInt(value.TransferOrderdate.replace("/Date(", "").replace(")/", ""), 10));
+                                let TOdate = JSON.stringify(dab);
+                                TOdate = TOdate.slice(1, 11);
+                         
+                               $('#ToStoreId').append('<option value=' + value.ToStoreId + '>' + value.ToStoreName + '</option>');
+                               
+                                $("#ItemId").append('<option value=' + value.ItemId + '>' + value.ItemName + '</option>');
+                                $('#TransactionQuantity').val(value.TransactionQuantity);
+                                $("#UnitId").append('<option value=' + value.UnitId + '>' + value.UnitName + '</option>');
+                                $("#TransferTypeId").append('<option value=' + value.TransferTypeId + '>' + value.TransferTypeName + '</option>');
+                                $("#ConditionOfItemId").append('<option value=' + value.ConditionOfItemId + '>' + value.ConditionOfItemName + '</option>');
+                                $('#TransferOrderDate').val(TOdate);
+                                $('#TransferOrderDeliveryDate').val(TDdate);
+                               $('#OrderId').val(value.TransferOrderId);
+
+
+                            });
+                        }
+                });
+
+
+            }
+
+            $("#TransferTab").css("display", "block");
+
+
+        }
+
+
+
+        //Sumon vai Code
+
+        var cart = [];
+        $(function () {
+            if (localStorage.cart) {
+                cart = JSON.parse(localStorage.cart);
+                showCart();
+
+            }
+        });
+
+
+
+        function addToCart() {
+            //alert("ok")
+            //var vInventoryId = $("#InvetoryId").val();
+            //var vAvailableQuantity = $("#AvailableQuantity").val();
+            var vOrderId = $("#OrderId").val();
+            alert(vOrderId);
+
+
+            var vToStoreName = $("#ToStoreId option:selected").text();
+            var vToStoreId = $("#ToStoreId option:selected").val();
+
+            var vItemname = $("#ItemId option:selected").text();
+            var vItemId = $("#ItemId option:selected").val();
+            var vTransactionQty = $("#TransactionQuantity").val();
+            var vUnitName = $("#UnitId option:selected").text();
+            var vUnitId = $("#UnitId option:selected").val();
+            var vTransferTypeName = $("#TransferTypeId option:selected").text();
+            var vTransferTypeId = $("#TransferTypeId option:selected").val();
+            var vConditionOfItemName = $("#ConditionOfItemId option:selected").text();
+            var vConditionOfItemId = $("#ConditionOfItemId option:selected").val();
+
+
+
+            var vTransferOrderDate = $("#TransferOrderDate").val();
+            var vTransferOrderDeliveryDate = $("#TransferOrderDeliveryDate").val();
+            var vTransferDate = $("#TransferDate").val();
+
+            $('#reset').prop('disabled', false);
+            $('#btnsave').prop('disabled', false);
+            $('#update').prop('disabled', false);
+
+            for (var i in cart) {
+                if (cart[i].orderId == vOrderId) {
+                    alert("You already add this in your chart.");
+                    //cart[i].TransactionQty = parseInt(cart[i].TransactionQty) + parseInt(vTransactionQty);
+                    showCart();
+                    saveCart();
+                    return;
+                }
+            }
+            // create JavaScript Object
+            var item = {
+                orderId: vOrderId, storename: vToStoreName, storeid: vToStoreId, ItemName: vItemname, ItemId: vItemId, UnitName: vUnitName, UnitId: vUnitId,
+                TransferTypeName: vTransferTypeName, TransferTypeId: vTransferTypeId, ConditionOfItemName: vConditionOfItemName,
+                ConditionOfItemId: vConditionOfItemId, TransactionQty: vTransactionQty, TransferOrderDate: vTransferOrderDate, TransferDate: vTransferDate, transferOrderDeliveryDate: vTransferOrderDeliveryDate
+            };
+            cart.push(item);
+            saveCart();
+            showCart();
+            $("#adtochart").css("display", "block");
+        }
+
+        function deleteItem(index) {
+            cart.splice(index, 1); // delete item at index
+            showCart();
+            saveCart();
+        }
+
+        function saveCart() {
+            if (window.localStorage) {
+                localStorage.cart = JSON.stringify(cart);
+                //clear();
+            }
+        }
+
+        function showCart() {
+            if (cart.length == 0) {
+                $("#tbl").css("visibility", "hidden");
+                return;
+            }
+            console.log(cart);
+
+            $("#tbl").css("visibility", "visible");
+
+            $("#tblbody").empty();
+
+            var sum = 0;
+            for (var i in cart) {
+
+                var item = cart[i];
+                //sum += item.Qtd * item.Price
+                //$("#total").text(sum);
+                //$("#grandtotal").val(sum);
+
+                var row = "<tr><td>" + item.orderId + "</td><td>" + item.storename + "</td><td>" +
+                    item.ItemName + "</td><td>" + item.TransactionQty + "</td><td>"
+                    + item.UnitName + "</td><td>" + item.TransferTypeName + "</td><td>" + item.TransferDate + "</td><td>" + item.TransferOrderDate + "</td><td>" + item.ConditionOfItemName + "</td><td>"
+                    + "<button onclick='deleteItem(" + i + ")'>Remove</button><button onclick='Edit(" + item.orderId + ")'>Edit</button></td></tr>";
+
+                //var row = "<tr><td>"  + item.InventoryId + "</td><td>" + item.ItemName + "</td><td>" +
+                //    item.TransactionQty + "</td<td>" +
+                //     item.UnitName + "</td><td>" +
+                //    item.TransferTypeName + "</td><td>" +
+                //    item.ConditionOfItemName + "</td><td>" +
+
+                //    item.TransferOrderDate + "</td><td>" +
+                //    item.TransferDate + "</td><td>"
+                //    + "<button onclick='deleteItem(" + i + ")'>Remove</button></td></tr>";
+
+                $("#tblbody").append(row);
+
+
+
+            }
+        }
+
+
+
+        //Add Data Purchase
+        function Add(data) {
+            //alert("Ok")
+            $.ajax({
+
+                url: "/Transfer/SaveTransferRecord",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: data,
+                success: function (data) {
+                    alert(data.success);
+                    showAlert(data);
+                    //loadInventoryInformation();
+                    $("#ItemId").empty().append('<option>Please select Item</option>')
+                    $('#blogTable tbody').empty();
+                    LoadItem();
+                    console.log(data.success);
+                    localStorage.clear();
+                    
+                  
+
+                },
+                error: function (errormessage) {
+                    alert(errormessage.responseText);
+                }
+
+            });
+        }
+        $("#btnsave").click(function (e) {
+
+            e.preventDefault();
+            //alert("working");
+
+            var curtarray = [];
+            curtarray.length = 0;
+            $.each(cart, function (i, v) {
+
+                //console.log(v.orderId);
+                curtarray.push({
+                    TransferOrderId: v.orderId,
+                    ToStoreId: v.storeid,
+                    ItemId: v.ItemId,
+                    TransactionQuantity: v.TransactionQty,
+                    TransferTypeId: v.TransferTypeId,
+                    UnitId: v.UnitId,
+                    ConditionOfItemId: v.ConditionOfItemId,
+                    AvailableQuantity: v.AvailableQuantity,
+
+                    DateOfTransferOrder: v.TransferOrderDate,
+                    TransferOrderDeliveryDate: v.transferOrderDeliveryDate,
+                    DateOfActualTransfer: v.TransferDate
+
+                })
+            })
+
+
+            var data = JSON.stringify({
+               
+              TransferDetailsViewModel: curtarray
+            });
+            purchaseRemove();
+
+            $.when(Add(data)).then(function (response) {
+                localStorage.clear();
+                console.log(response);
+            }).fail(function (err) {
+                localStorage.clear();
+                consol.log(err);
+            })
+
+
+            function purchaseRemove() {
+                $("#tblbody").remove();
+                //$("#txttotal").val("");
+                //$("#txtdisrate").val("");
+                //$("#txtdisamount").val("");
+                //$("#txttaxrate").val("");
+                //$("#txttaxamt").val("");
+                //$("#txtgrandtotal").val("");
+                //$("#prouredate").val("");
+                //$("#ddlprocurement").val("");
+                //$("#ddlSupplier").val("");
+                //$("#ddlstore").val("");
+                localStorage.clear();
+            }
+
+            function clear() {
+                //$("#txtqty").val("");
+                //$("#txtprice").val("");
+            }
+
+        })
+
+        //End
+
+
+
+
+
+    </script>
+}

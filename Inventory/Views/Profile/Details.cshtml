@@ -1,0 +1,451 @@
+﻿@model Domain.ViewModels.ProfileViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProfileViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genderid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genderid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalityID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofMarriage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofMarriage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpouseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpouseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpouseProfession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpouseProfession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmergencyContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmergencyContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrivingLicenceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrivingLicenceNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hobby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hobby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PresentAddressFull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PresentAddressFull)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrePoliceStationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrePoliceStationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrePostOfficeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrePostOfficeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreDistrictId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreDistrictId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreDivisionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreDivisionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCountryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreCountryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentAddressFull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentAddressFull)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerPoliceStationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerPoliceStationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerPostOfficeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerPostOfficeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDistrictId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDistrictId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDivisionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDivisionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerCountryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerCountryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrePoliceStationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrePoliceStationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrePostOfficeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrePostOfficeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreDistrictName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreDistrictName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreDivisionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreDivisionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreCountryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerPoliceStationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerPoliceStationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerPostOfficeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerPostOfficeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDistrictName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDistrictName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDivisionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDivisionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerCountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerCountryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            @if (Model.ImagePath != null)
+            {
+
+                <img src="@Url.Content(Model.ImagePath)" id='img-upload' class="img-rounded img-responsive" style="padding:2px 2px 2px 2px;height:125px;width:125px;" />
+
+            }
+            else
+            {
+                <img id='img-upload' class="img-rounded img-responsive" style="padding:2px 2px 2px 2px;height:125px;width:125px;" />
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodGroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodGroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegionName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

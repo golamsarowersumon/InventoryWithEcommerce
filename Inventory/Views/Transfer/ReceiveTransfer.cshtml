@@ -1,0 +1,209 @@
+﻿@model Domain.ViewModels.TransferViewModel
+@{
+    ViewBag.Title = "ReceiveTransfer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    if (TempData.ContainsKey("OperationMessage") && !string.IsNullOrWhiteSpace(TempData["OperationMessage"].ToString()))
+    {
+        //vMessage = TempData["OperationMessage"].ToString();
+        <script type="text/javascript">
+            window.onload = function () {
+
+                 alert('@TempData["OperationMessage"]');
+            };
+        </script>
+    }
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel-success Treceive" >
+                <div class="panel-heading">
+                   @*<span class="panel-title">UPDATE EMPLOYEE DATA</span>*@
+                    <div class="panel-title">Receive Transfer Item</div>
+                </div>
+                <div class="row" style="padding:5px 15px 5px 15px;">
+                    <div class="col-md-12 col-lg-12 col-sm-12 ">
+                        <span class="panel-title">
+                            Showing @Model.TransferViewModelList.Count Record
+
+
+                            <button class="btn btn-md btn-info pull-right" type="submit" name="cancel" value="Cancel"
+                                    formaction="CancelForm" formmethod="post" id="btnCancel" disabled="disabled">
+                                <i class="fa fa-save"></i> Cancel
+                            </button>
+                            <button class="btn btn-md btn-info pull-right" ttype="submit" name="save" value="Save"
+                                    formaction="ReceiveTransfer" formmethod="post" id="btnReceive" disabled="disabled">
+                                <i class="fa fa-save"></i> Receive
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="panel-body " id="Treceive">
+
+                    @if (Model.TransferViewModelList.Any())
+                    {
+
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="allGridCheck"></th>
+                                        <th>TempInvId</th>
+                                        <th>InventoryId</th>
+                                        <th>TransferId</th>
+                                        <th>TransferDetailId</th>
+                                        <th>From Store</th>
+                                        <th>To Store</th>
+                                        <th>Item Name</th>
+
+                                        <th>Item Quantity</th>
+                                        <th>Unit Name</th>
+                                        <th>Transfertype Name</th>
+                                        <th>Item Condition Name</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="GridContent" id="GridBody">
+
+                                    @for (int i = 0; i < Model.TransferViewModelList.Count; i++)
+                                    {
+
+                                        <tr class="GridFields">
+                                            <td>@Html.CheckBoxFor(m => m.TransferViewModelList[i].IsChecked, new { @class = "singleGridCheck" })</td>
+
+                                            <td>
+                                                @Html.TextBoxFor(m => m.TransferViewModelList[i].Id, new { @class = "form-control", @autofocus = true, @Readonly = "readonly", @Value = Model.TransferViewModelList[i].Id })
+                                            </td>
+
+                                            <td>
+                                                @Html.TextBoxFor(m => m.TransferViewModelList[i].Inv_HD_ID, new { @class = "form-control", @autofocus = true, @Readonly = "readonly", @Value = Model.TransferViewModelList[i].Inv_HD_ID })
+                                            </td>
+                                            <td>@Html.TextBoxFor(m => m.TransferViewModelList[i].TransferId, new { @class = "form-control", @autofocus = true, @Readonly = "readonly", @Value = Model.TransferViewModelList[i].TransferId })</td>
+                                            <td>@Html.TextBoxFor(m => m.TransferViewModelList[i].TransferDetailsId, new { @class = "form-control", @autofocus = true, @Readonly = "readonly", @Value = Model.TransferViewModelList[i].TransferDetailsId })</td>
+                                            <td>
+                                                @Model.TransferViewModelList[i].FromStoreName
+                                                @*@Html.DropDownListFor(m => m.TransferViewModelList[i].FromStoreId, new SelectList(ViewBag.StoreList, "FromStoreId", "FromStoreName", @Model.TransferViewModelList[i].FromStoreId), new { @class = "form-control custom-select-box" })
+                                        @Html.ValidationMessageFor(m => m.TransferViewModelList[i].FromStoreId, "", new { @class = "text-danger" })*@
+                                            </td>
+                                            <td> @Model.TransferViewModelList[i].ToStoreName</td>
+                                            <td>
+                                                @Model.TransferViewModelList[i].ItemName
+                                                @*@Html.DropDownListFor(m => m.TransferViewModelList[i].ItemId, new SelectList(ViewBag.ItemList, "ItemId", "ItemName", @Model.TransferViewModelList[i].ItemId), new { @class = "form-control custom-select-box" })
+                                        @Html.ValidationMessageFor(m => m.TransferViewModelList[i].ItemId, "", new { @class = "text-danger" })*@
+                                            </td>
+
+                                            <td>
+                                                @*@Model.TransferViewModelList[i].TransactionQuantity*@
+                                                @Html.TextBoxFor(m => m.TransferViewModelList[i].TransactionQuantity, new { @class = "form-control", @autofocus = true, @Value = Model.TransferViewModelList[i].TransactionQuantity })
+                                            </td>
+
+                                            <td>
+                                                @Model.TransferViewModelList[i].UnitName
+                                                @*@Html.DropDownListFor(m => m.TransferViewModelList[i].UnitId, new SelectList(ViewBag.UnitList, "UnitId", "UnitName", @Model.TransferViewModelList[i].UnitId), new { @class = "form-control custom-select-box" })
+                                        @Html.ValidationMessageFor(m => m.TransferViewModelList[i].UnitId, "", new { @class = "text-danger" })*@
+                                            </td>
+
+                                            <td>
+                                                @Model.TransferViewModelList[i].TransferTypeName
+                                                @*@Html.LabelFor(m => m.TransferViewModelList[i].TransferTypeName)*@
+                                                @*@Html.DropDownListFor(m => m.TransferViewModelList[i].TransferTypeId, new SelectList(ViewBag.TransferTypeList, "TransferTypeId", "TransferTypeName", @Model.TransferViewModelList[i].TransferTypeId), new { @class = "form-control custom-select-box childUnitId" })
+                                        @Html.ValidationMessageFor(m => m.TransferViewModelList[i].TransferTypeId, "", new { @class = "text-danger" })*@
+                                            </td>
+                                            <td>
+                                                @Model.TransferViewModelList[i].ConditionOfItemName
+                                                @*@Html.TextBoxFor(m => m.TransferViewModelList[i].TransferOrderdate, new { @class = "form-control", @autofocus = true, @Readonly="readonly", @Value = Model.TransferViewModelList[i].TransferOrderdate })*@
+                                            </td>
+
+
+
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ }
+
+
+
+
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            var btnName = localStorage.getItem("btnName");
+            if (btnName) {
+                $('.btn-save').html('<i class="fa fa-edit"></i> ' + btnName);
+                localStorage.removeItem("btnName");
+            }
+            $(".btn-edit").click(function () {
+                localStorage.setItem("btnName", "Update");
+            });
+
+            $(document).on('click', '.allGridCheck, .singleGridCheck', function (event) {
+                if ($(event.target).is(':checked')) {
+                    $('#btnCancel').prop('disabled', false);
+                    $('#btnReceive').prop('disabled', false);
+                }
+                if ($('.singleGridCheck').length === $('.singleGridCheck:checkbox:not(":checked")').length) {
+                    $('#btnCancel').prop('disabled', true);
+                    $('#btnReceive').prop('disabled', true);
+                }
+            });
+
+
+           
+
+
+
+
+        });
+
+
+        $(document).on('click', '.allGridCheck', function () {
+            if (this.checked) {
+                $('.GridContent input:checkbox').prop('checked', true);
+            } else {
+                $('.GridContent input:checkbox').prop('checked', false);
+            }
+        });
+
+        $(document).on('click', '.singleGridCheck', function () {
+            if ($('.singleGridCheck:checked').length === $('.singleGridCheck').length) {
+                $('.allGridCheck:checkbox').prop('checked', true);
+            } else {
+                $('.allGridCheck:checkbox').prop('checked', false);
+            }
+        });
+
+
+
+
+
+
+
+
+    </script>
+}
+

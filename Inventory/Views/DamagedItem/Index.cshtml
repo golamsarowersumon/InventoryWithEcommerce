@@ -1,0 +1,517 @@
+﻿
+
+<div class="modal fade" id="modal-animation-3" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated zoomInUp">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="Reload()" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-animation-2" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated zoomInUp">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-uppercase">Selected Damage Item</div>
+            <div class="card-body" style="border-radius:2px;">
+                <div class="table-responsive" style="height:200px">
+                    <table id="damtab" class="table table-striped table-bordered notranslate">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Unique Number</th>
+                                <th>Procurement Date</th>
+                                <th>Avalable Quantity</th>
+                                <th>Damage Quantity</th>
+                                <th>Damage Type</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblbodydam"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <div class="col-md-12  col-sm-12">
+                            <select id="ddlitem" class="form-control">
+                                <option>select Item for Damage</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <div class="col-md-12  col-sm-12">
+                            <div class="search-bar">
+                                <input type="text" id="uninumber" placeholder="Please Enter Item Unique Number Or Date" class="form-control" />
+                                <p class="notfound"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive" style="height:150px">
+                    <table id="tab" class="table table-striped table-bordered notranslate">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Unique Number</th>
+                                <th>Procurement Date</th>
+                                <th>Store</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="form-footer pull-right">
+    <button type="button" onclick="Reload()" class="btn btn-danger"><i class="fa fa-times"></i> CANCEL</button>
+    <button type="button" id="btnsave" class="btn btn-success"><i class="fa fa-check-square-o"></i> SAVE</button>
+</div>
+
+
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+
+            ItemLoad();
+
+        })
+
+
+        function ItemSearch() {
+            // Search all columns
+            $('#uninumber').keyup(function () {
+                // Search Text
+                var unnumber = $(this).val();
+                var date = $(this).val();
+
+                // Hide all table tbody rows
+                $('#tab tbody tr').hide();
+
+                // Count total search result
+                var lenuniqnum = $('#tab tbody tr:not(.notfound) td:nth-child(4):contains("' + unnumber + '")').length;
+                //var lendate = $('#tab tbody tr:not(.notfound) td:nth-child(5):contains("' + date + '")').length;
+
+                if (lenuniqnum > 0) {
+                    // Searching text in columns and show match row
+                    $('#tab tbody tr:not(.notfound) td:contains("' + unnumber + '")').each(function () {
+                        $(this).closest('tr').show();
+                    });
+                } else {
+                    $('#tab tbody tr:not(.notfound) td:contains("' + date + '")').each(function () {
+                        $(this).closest('tr').show();
+                    });
+                }
+
+            });
+        }
+
+        function ItemLoad() {
+            $.ajax({
+
+                url: "/DamagedItem/ItemGet",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlitem").append("<option value=" + data[i].ItemId + ">" + data[i].ItemName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        $("#ddlitem").change(function () {
+            var id = $(this).val();
+            $.ajax({
+
+                url: "/DamagedItem/Itemload?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#tbl").css("visibility", "visible");
+
+                    $("#tblbody").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var item = data[i];
+
+
+
+                        var da = new Date(parseInt(data[i].DateOfPurchase.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                        let date = JSON.stringify(da)
+                        date = date.slice(1, 11)
+
+
+                        //console.log(da);
+
+
+
+                        //var result = "";
+                        //var date = data[i].DateOfPurchase;
+                        //if (date != null) {
+                        //    var nowDate = new Date(parseInt(date.substr(6)));
+
+                        //    result += nowDate.format("dd/mm/yyyy");
+                        //}
+
+                        //else {
+                        //    var result = "";
+
+                        //}
+
+                        var row = "<tr><td hidden>" + item.Inv_Details_ID + "</td><td>" + item.ItemName +
+                            "</td><td>" + item.PO_Price + "</td><td>"
+                            + item.Item_Unique_Number + "</td><td>" + date + "</td><td>" + item.StoreName + "</td><td>"
+                            + "<button onclick='selectdamageitem(" + item.Inv_Details_ID + ")'>Select</button></td></tr>";
+
+                        $("#tblbody").append(row);
+                    }
+                    ItemSearch();
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+
+
+        var damitemarray = [];
+        //console.log(damitemarray);
+
+
+        function selectdamageitem(id) {
+            $.ajax({
+
+                url: "/DamagedItem/Getdamageitem?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+
+                    var invdetailsid;
+                    var itemid;
+                    var itemname;
+                    var price;
+                    var uniqnumber;
+                    var storeid;
+                    var procuredate;
+                    var avalableqty;
+                    $.each(data, function (i, v) {
+                        invdetailsid = v.Inv_Details_ID,
+                            itemid = v.ItemId,
+                            itemname = v.ItemName,
+                            price = v.PO_Price,
+                            uniqnumber = v.Item_Unique_Number,
+                            storeid = v.StoreId,
+                            storename = v.StoreName,
+                            procuredate = v.DateOfPurchase,
+                            avalableqty = v.AvailableQty
+                    })
+
+                    // update qty if product is already present
+                    for (var i in damitemarray) {
+                        if (damitemarray[i].InvdetalsId == invdetailsid) {
+                            showdamitem();
+                            return;
+                        }
+
+                    }
+                    // create JavaScript Object
+                    var item = {
+                        InvdetalsId: invdetailsid, ItemId: itemid, ItemName: itemname, Price: price, UniqNumber: uniqnumber,
+                        StoreId: storeid, StoreName: storename, Procuredate: procuredate, AvalableQty: avalableqty
+                    };
+                    damitemarray.push(item);
+
+                    showdamitem();
+
+
+                }
+            })
+        }
+
+
+
+
+
+        function showdamitem() {
+
+
+            //$("#tbldam").css("visibility", "visible");
+
+            $("#tblbodydam").empty();
+            for (var i = 0; i < damitemarray.length; i++) {
+
+                var item = damitemarray[i];
+
+                var da = new Date(parseInt(item.Procuredate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                let purchasedate = JSON.stringify(da)
+                purchasedate = purchasedate.slice(1, 11)
+
+
+                //var result = "";
+                //var date = item.Procuredate;
+                //if (date != null) {
+                //    var nowDate = new Date(parseInt(date.substr(6)));
+
+                //    result += nowDate.format("dd/mm/yyyy");
+                //}
+
+                //else {
+                //    var result = "";
+
+                //}
+
+
+                var row = "<tr><td><input type='text' hidden id='invdetailsid' value='" + item.InvdetalsId + "' /><input type='text' hidden id='storeid' value='" + item.StoreId + "' /><input type='text' hidden id='itemid' value='" + item.ItemId + "' /><input type='text' id='itemname'readonly  value='" + item.ItemName + "' />" +
+                    "</td><td><input  type='text' id='price' readonly  value='" + item.Price + "' />" +
+                    "</td><td><input type='text' id='uniqnumber' readonly value='" + item.UniqNumber + "' />" +
+                    "</td><td><input type='text' id='purchasedate' readonly value='" + purchasedate + "' />" +
+                    "</td><td><input type='text' id='avalableqty' readonly value='" + item.AvalableQty + "' />" +
+                    "</td><td><input type='number' min='0' id='itemqty'/>" +
+                    "</td><td><input type='text' id='damtype'/>" +
+                    "</td><td><input type='button' value='Remove' onclick='deleteItem()' />" +
+                    "</td></tr>";
+
+                $("#tblbodydam").append(row);
+
+
+
+            }
+
+        }
+        function deleteItem(index) {
+            damitemarray.splice(index, 1); // delete item at index
+            showdamitem();
+
+        }
+
+
+
+        
+
+
+
+        var mainarr = [];
+        //console.log(mainarr);
+        //Add Data Purchase
+        function Add(data) {
+            //alert("Ok")
+            $.ajax({
+
+                url: "/DamagedItem/SaveDamage",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: data,
+                success: function (data) {
+                    $("#modal-animation-3").modal("toggle");
+                    $(".modal-body").html("Damage Item Process Successfully Save");
+                   
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+      
+
+        $("#btnsave").click(function () {
+
+
+           
+
+            var rowCount = $('#tblbodydam tr').length;
+            
+            if (rowCount > 0) {
+
+
+                if (damageItemvalidation()) {
+
+
+                    var mainTable = $('#damtab');
+                    var tr = mainTable.find('#tblbodydam tr');
+
+                    tr.each(function () {
+
+
+
+                        var InvDetailsId = $(this).find('#invdetailsid').val();
+                        var itemId = $(this).find('#itemid').val();
+                        var itemqty = $(this).find('#itemqty').val();
+                        var avalableQty = $(this).find('#avalableqty').val();
+                        var itemprice = $(this).find('#price').val();
+
+                        var uniqnumber = $(this).find('#uniqnumber').val();
+                        var purchasedate = $(this).find('#purchasedate').val();
+                        var storeid = $(this).find('#storeid').val();
+                        var damtype = $(this).find('#damtype').val();
+
+                        var item = {
+                            ItemId: itemId, ItemQty: itemqty, ItemPrice: itemprice, Uniqnumber: uniqnumber, Purchasedate: purchasedate, StoreId: storeid, DamageType: damtype,
+                            AvalableQty: avalableQty, InventoryDetailsId: InvDetailsId
+                        }
+                        console.log(item);
+                        mainarr.push(item);
+
+                    });
+
+
+
+
+
+                    var Damagearray = [];
+                    Damagearray.length = 0;
+                    $.each(mainarr, function (i, v) {
+                        Damagearray.push({
+                            Inv_Details_ID: v.InventoryDetailsId,
+                            ItemId: v.ItemId,
+                            DamagedItemType: v.DamageType,
+                            DamageQuantity: v.ItemQty,
+                            StoreId: v.StoreId,
+                            PO_Price: v.ItemPrice,
+                            Item_Unique_Number: v.Uniqnumber,
+                            DateOfPurchase: v.Purchasedate,
+                            AvailableQty: v.AvalableQty
+
+                        })
+                    })
+
+                    var data = JSON.stringify({
+
+                        damagedItemVM: Damagearray
+                    });
+
+
+                    $.when(Add(data)).then(function (response) {
+                        console.log(response);
+                    }).fail(function (err) {
+                        consol.log(err);
+                    })
+
+                } 
+
+
+            } else {
+                $("#modal-animation-2").modal("toggle");
+                $(".modal-body").html("Damage Item Not Selected");
+            }
+
+           
+
+        })
+
+
+        function damageItemvalidation() {
+            var validate = true;
+
+            var mainTable = $('#damtab');
+            var tr = mainTable.find('#tblbodydam tr');
+            
+            tr.each(function () {
+                var avalableQty = $(this).find('#avalableqty').val();
+                var itemqty = $(this).find('#itemqty').val();
+                var damtype = $(this).find('#damtype').val();
+              
+                if (itemqty == "") {
+                    validate = false;
+                }
+                else if (itemqty <= 0) {
+                    validate = false;
+                }
+                else if (avalableQty < itemqty) {
+                    validate = false;
+                }
+                else if (damtype == "") {
+                    validate = false;
+                }
+            })
+
+            if (validate == true) {
+                return true;
+            } else {
+                $("#modal-animation-2").modal("toggle");
+                $(".modal-body").html("Input Field Are Check");
+                return false;
+
+            }
+        }
+
+        function Reload() {
+            location.reload(true);
+        }
+
+    </script>
+
+
+
+}
+

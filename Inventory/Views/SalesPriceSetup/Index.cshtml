@@ -1,0 +1,512 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Modal -->
+<div class="modal fade" id="largesizemodal" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sales Price, Discount And Vat Setup Form</h5>
+                <button type="button" class="close" onclick="ClearField()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="card-body">
+
+                    <div class="col-lg-8">
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label class="col-sm-4 col-md-4 col-form-label">Item</label>
+                                <div class="col-sm-8 col-md-8">
+                                    <select id="ddlitem" class="form-control">
+                                        <option value="">Select Item</option>
+                                    </select>
+                                    <p class="itemvalid" style="color:#f50909"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-md-4 col-form-label">Sales Price %&nbsp;<input type="checkbox" id="salespercentageyesno" /></label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="salespricepersent" class="form-control" min="0" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Sales Price Amount(Tk.)</label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="salesamount" class="form-control" />
+                                    <p class="salesamountpricevalid" style="color:#f50909"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-md-4 col-form-label">Discount %&nbsp;<input type="checkbox" id="discountpercentyesno" /></label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="discountpercent" class="form-control" min="0" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Discount Amount(Tk.)</label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="discountamount" class="form-control" />
+                                    @*<p class="pricecheck" style="color:#f50909"></p>*@
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-md-4 col-form-label">Vat %&nbsp;<input type="checkbox" id="vatpercentyesno" /></label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="vatpercent" class="form-control" min="0" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-4 col-md-4 col-form-label">Vat Amount(Tk.)</label>
+                                <div class="col-sm-8 col-md-8">
+                                    <input type="number" id="vatamount" class="form-control" />
+                                    @*<p class="pricecheck" style="color:#f50909"></p>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-7 col-md-7 col-form-label">Purchase Price</label>
+                                <div class="col-sm-5 col-md-5">
+                                    <span id="txtpurchaseprice"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-7 col-md-7 col-form-label">Brand Name</label>
+                                <div class="col-sm-5 col-md-5">
+                                    <span id="txtbrandname"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group row" style="margin-bottom:5px;">
+                                <label for="input-21" class="col-sm-7 col-md-7 col-form-label">Model</label>
+                                <div class="col-sm-5 col-md-5">
+                                    <span id="txtmodelname"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" id="txtbrandid" hidden />
+                        <input type="text" id="txtmodelid" hidden />
+                        <input type="text" id="saleselementid" hidden />
+                        <input type="text" id="txtitemid" hidden />
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-primary" onclick="ClearField()" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <button type="button" onclick="SalesElementSetupSave()" class="btn btn-primary"><i class="fa fa-check-square-o"></i>Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Sales Amount Table</div>
+            <div class="card-body">
+                <input type="button" class="btn btn-primary" value="Set Amount" data-toggle='modal' data-target='#largesizemodal' style="margin-left:15px;" />
+                <div class="table-responsive">
+                    <div id="example_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tbl" class="table table-bordered dataTable" role="grid" aria-describedby="example_info">
+                                    <thead>
+                                        <tr>
+                                            <th>Picture</th>
+                                            <th>Item Name</th>
+                                            <th>Sales Price(%)</th>
+                                            <th>Sales Price(Tk.)</th>
+                                            <th>Discount(%)</th>
+                                            <th>Discount(Tk.)</th>
+                                            <th>Vat(%)</th>
+                                            <th>Vat(Tk.)</th>
+                                            <th>Option</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            LoadSalesElement();
+            LoadItem();
+
+            $("#salespricepersent").attr("disabled", true);
+            $("#discountpercent").attr("disabled", true);
+            $("#vatpercent").attr("disabled", true);
+
+        })
+
+        $('#salespercentageyesno').click(function () {
+
+            if ($('#salespercentageyesno').is(":checked")) {
+                $("#salespricepersent").attr("disabled", false);
+                $("#salesamount").attr("disabled", true);
+
+            } else {
+                $("#salespricepersent").attr("disabled", true)
+                $("#salesamount").attr("disabled", false);
+                $("#salespricepersent").val("");
+                $("#salesamount").val("");
+
+            }
+        })
+
+        $('#discountpercentyesno').click(function () {
+
+            if ($('#discountpercentyesno').is(":checked")) {
+                $("#discountpercent").attr("disabled", false);
+                $("#discountamount").attr("disabled", true);
+                $("#discountamount").val("");
+
+            } else {
+                $("#discountpercent").attr("disabled", true)
+                $("#discountamount").attr("disabled", false);
+                $("#discountpercent").val("");
+                $("#discountamount").val("");
+
+            }
+        })
+
+        $('#vatpercentyesno').click(function () {
+
+            if ($('#vatpercentyesno').is(":checked")) {
+                $("#vatpercent").attr("disabled", false);
+                $("#vatamount").attr("disabled", true);
+                $("#vatamount").val("");
+
+            } else {
+                $("#vatpercent").attr("disabled", true)
+                $("#vatamount").attr("disabled", false);
+                $("#vatpercent").val("");
+                $("#vatamount").val("");
+
+            }
+        })
+
+        function LoadItem() {
+            $.ajax({
+
+                url: "/SalesPriceSetup/ItemLodforSalesprice",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlitem").append("<option value=" + data[i].ItemId + ">" + data[i].ItemName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+        function LoadSalesElement() {
+            $.ajax({
+                url: "/SalesPriceSetup/LoadElementofSalesAmount",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#tbl tbody").empty();
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#tbl tbody").append(
+                            "<tr><td><img src =" + data[i].Product_Image + " height='30' weight='30' /></td><td>" + data[i].ItemName + "</td><td>" + data[i].SalesPricePercent + "</td><td>" + data[i].SalesPriceAmount + "</td><td>" + data[i].DiscountPercent + "</td><td>" + data[i].DiscountAmount + "</td><td>" + data[i].VatPercent + "</td><td>" + data[i].VarAmount + "</td><td><input type='button' onclick='Edit(" + data[i].SalesElementSetupId + ")' value='Edit' data-toggle='modal' data-target='#largesizemodal' /></td></tr>"
+                        )
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+        var purchaseprice = 0;
+        function Edit(id) {
+            $.ajax({
+                url: "/SalesPriceSetup/Editsaleselement?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    purchaseprice = data.PurchasePrice;
+                    $("#saleselementid").val(data.SalesElementSetupId);
+                    $("#txtitemid").val(data.ItemId);
+                    $("#salespricepersent").val(data.SalesPricePercent);
+                    $("#salesamount").val(data.SalesPriceAmount);
+                    $("#discountpercent").val(data.DiscountPercent);
+                    $("#discountamount").val(data.DiscountAmount);
+                    $("#vatpercent").val(data.VatPercent);
+                    $("#vatamount").val(data.VarAmount);
+                    $("#txtbrandid").val(data.BrandId);
+                    $("#txtmodelid").val(data.ModelId);
+                    $("#txtitemname").text(data.ItemName);
+                    $("#txtpurchaseprice").text(data.PurchasePrice);
+                    $("#ddlitem").attr("disabled", true);
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+       
+        $("#ddlitem").change(function () {
+            var Itemid = $("#ddlitem").val();
+            $.ajax({
+
+                url: "/SalesPriceSetup/Itemwisepurchaseprice?id=" + Itemid,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    purchaseprice = 0;
+                    purchaseprice = data.PO_Price;
+                    $("#txtpurchaseprice").text(data.PO_Price);
+                    $("#txtbrandname").text(data.BrandName);
+                    $("#txtmodelname").text(data.ModelName);
+                    $("#txtbrandid").val(data.BrandId);
+                    $("#txtmodelid").val(data.ModelId);
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+        $("#salespricepersent").keyup(function () {
+            var salespersent = $("#salespricepersent").val();
+            var salespercenamount = (purchaseprice * salespersent) / 100;
+            var salesamount = 0;
+            if (salespercenamount > 0) {
+                salesamount = purchaseprice + salespercenamount;
+            } else {
+                salesamount = 0;
+            }
+
+            $("#salesamount").val(salesamount);
+
+        })
+
+        function SalesElementSetupSave() {
+
+            if ($("#saleselementid").val() != "") {
+
+                if (saleselementvalidationforupdate()) {
+                    var data = {
+                        SalesElementSetupId: $("#saleselementid").val(),
+                        ItemId: $("#txtitemid").val(),
+                        SalesPricePercent: $("#salespricepersent").val(),
+                        SalesPriceAmount: $("#salesamount").val(),
+                        DiscountPercent: $("#discountpercent").val(),
+                        DiscountAmount: $("#discountamount").val(),
+                        VatPercent: $("#vatpercent").val(),
+                        VarAmount: $("#vatamount").val(),
+                        BrandId: parseInt($("#txtbrandid").val()),
+                        ModelId: parseInt($("#txtmodelid").val()),
+                        PurchasePrice: parseFloat($("#txtpurchaseprice").text())
+                    }
+                    $.ajax({
+
+                        url: "/SalesPriceSetup/Create",
+                        type: "POST",
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        data: JSON.stringify(data),
+                        success: function () {
+                            //$("#largesizemodal").modal("toggle");
+                            location.reload();
+                            //LoadSalesElement();
+
+                        },
+                        error: function (errormessage) {
+                            //alert(errormessage.responseText);
+                        }
+
+                    });
+                }
+
+            } else {
+                if (saleselementvalidation()) {
+                    var data = {
+                        SalesElementSetupId: 0,
+                        ItemId: $("#ddlitem").val(),
+                        SalesPricePercent: $("#salespricepersent").val(),
+                        SalesPriceAmount: $("#salesamount").val(),
+                        DiscountPercent: $("#discountpercent").val(),
+                        DiscountAmount: $("#discountamount").val(),
+                        VatPercent: $("#vatpercent").val(),
+                        VarAmount: $("#vatamount").val(),
+                        BrandId: parseInt($("#txtbrandid").val()),
+                        ModelId: parseInt($("#txtmodelid").val()),
+                        PurchasePrice: parseFloat($("#txtpurchaseprice").text())
+                    }
+                    $.ajax({
+
+                        url: "/SalesPriceSetup/Create",
+                        type: "POST",
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        data: JSON.stringify(data),
+                        success: function () {
+                            //$("#largesizemodal").modal("toggle");
+                            location.reload();
+                            //LoadSalesElement();
+
+                        },
+                        error: function (errormessage) {
+                            //alert(errormessage.responseText);
+                        }
+
+                    });
+                }
+            }
+        }
+
+        function saleselementvalidation() {
+
+            var ItemId = $("#ddlitem").val();
+            var SalesPriceAmount = $("#salesamount").val();
+
+
+            var inputVal = new Array(ItemId, SalesPriceAmount);
+
+            var inputMessage = new Array("Item Name", "Sales Amount");
+
+            $('.error').hide();
+
+            if (inputVal[0] == "") {
+                $('.itemvalid').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[0] + '</span>');
+                return false;
+            }
+            //else if (inputVal[0] > 10) {
+            //    $('.logphonerange').after('<span class="error" style="color:#f50909">Please input 11 Digit</span>');
+            //    return false;
+            //}
+            if (inputVal[1] == "") {
+                $('.salesamountpricevalid').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[1] + '</span>');
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function saleselementvalidationforupdate() {
+
+           
+            var SalesPriceAmount = $("#salesamount").val();
+
+
+            var inputVal = new Array(SalesPriceAmount);
+
+            var inputMessage = new Array("Sales Amount");
+
+            $('.error').hide();
+
+            if (inputVal[0] == "") {
+                $('.salesamountpricevalid').after('<span class="error" style="color:#f50909"> Please Enter &nbsp;' + inputMessage[1] + '</span>');
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function ClearField() {
+            location.reload();
+            purchaseprice = data.PurchasePrice;
+            $("#saleselementid").val("");
+            $("#txtitemid").val("");
+            $("#salespricepersent").val("");
+            $("#salesamount").val("");
+            $("#discountpercent").val("");
+            $("#discountamount").val("");
+            $("#vatpercent").val("");
+            $("#vatamount").val("");
+            $("#txtbrandid").val("");
+            $("#txtmodelid").val("");
+            $("#txtitemname").text("");
+            $("#txtpurchaseprice").text("");
+           
+        }
+
+    </script>
+
+}
+

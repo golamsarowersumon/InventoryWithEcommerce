@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Domain.ViewModels.ProvinceViewModel>
+
+@{
+    ViewBag.Title = "Index";
+
+    string vMessage = "";
+    if (TempData.ContainsKey("message"))
+    {
+        vMessage = TempData["message"].ToString();
+        <script type="text/javascript">
+            window.onload = function () {
+
+                alert('@TempData["message"]');
+            };
+        </script>
+    }
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Province Information</div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row bottom">
+                        <div class="col-md-4 pull-left">
+
+                            <div style="margin-bottom:10px;"> <a href="@Url.Action("Create")" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>Add Province</a></div>
+
+
+                        </div>
+                        <div class="col-md-5 col-md-offset-3">
+
+
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                                <input id="Search" type="text" class="form-control" name="Search" placeholder="Enter text to search..">
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table table-responsive table-bordered table-hover">
+                            <thead class="bgdefault">
+                                <tr>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ProvinceName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CountryName)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr class="Search">
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProvinceName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CountryName)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Edit",new {id = item.ProvinceID})" title="Edit Category" class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                                        <a href="@Url.Action("Details",new { id = item.ProvinceID})" title="Details Category" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                        <a href="@Url.Action("Delete",new { id = item.ProvinceID})" title="Delete Category" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        function Contains(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+
+        $("#Search").keyup(function () {
+
+            var searchText = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+
+                if (!Contains($(this).text().toLowerCase(), searchText)) {
+
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+
+        });
+
+    });
+
+</script>

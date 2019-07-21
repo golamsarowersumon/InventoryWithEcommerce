@@ -1,0 +1,58 @@
+﻿@model Domain.ViewModels.CategoryViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Details of Category Record</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-md-offset-2" style="margin-top:15px;">
+                        <table class="table table-responsive table-hover">
+                            <tr>
+
+                                <th>@Html.Label("Category ID", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.CategoryId)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.Label("Category Name", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.CategoryName)</td>
+
+                            </tr>
+
+                           
+
+
+                        </table>
+
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <div class="form-actions no-color">
+                            <a href="@Url.Action("Edit", "Category")" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span> Edit
+                            </a>
+                            <a href="@Url.Action("Index", "Category")" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

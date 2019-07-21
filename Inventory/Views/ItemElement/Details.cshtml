@@ -1,0 +1,75 @@
+﻿@model Domain.ViewModels.ItemElementViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemElementViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemElementId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemElementId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemElementName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemElementName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubCategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubSubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubSubCategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubSubSubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubSubSubCategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ItemElementId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

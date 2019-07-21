@@ -1,0 +1,202 @@
+﻿@model Domain.ViewModels.RawMaterialsViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">USD Converter For All Currency</div>
+                </div>
+
+                <div class="panel-body">
+                    @using (Html.BeginForm("Create", "RawMaterials", FormMethod.Post, new { enctype = "multipart/form-data", encoding = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+
+                        <div class="col-md-12" style="margin-top:15px;">
+
+                            <div class="row">
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ItemName, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-9">
+                                        @Html.DropDownListFor(model => model.ItemId1, ViewBag.ItemList as SelectList, "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ItemId1, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-custom">
+                                        <thead class="bgdefault">
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" class="allBomGridCheck">
+                                                </th>
+
+                                                <th>Item Element Name</th>
+
+
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="BomGridContent" id="bomBody">
+
+
+                                            <tr class="BomGridFields">
+                                                <td>
+                                                    <input type="checkbox" class="singleBomGridCheck">
+                                                </td>
+
+                                                <td>
+                                                    @Html.DropDownListFor(a => a.ItemElementId1, ViewBag.ItemElementList as SelectList, "Please Select Element Name", new { @class = "form-control" })
+                                                </td>
+
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row">
+
+
+
+                                <div class="btn-group">
+                                    <button class="btn btn-md btn-success btn-save addBomGridBtn" type="button">
+                                        <i class="fa fa-plus"></i> Add Row
+                                    </button>
+                                    <button class="btn btn-md btn-danger btn-save deleteBomGridBtn" type="button" disabled="disabled">
+                                        <i class="fa fa-minus"></i> Delete Row
+                                    </button>
+
+
+                                    <button class="btn btn-md btn-primary btn-save" type="submit">
+                                        <i class="fa fa-save"></i> Save
+                                    </button>
+
+
+                                    <a href="@Url.Action("ClearBomEntry","BOM")" class="btn btn-md btn-warning btn-clear">
+                                        <i class="fa fa-circle-o-notch"></i> Clear
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                            }
+                        </div>
+                    </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+            $(document).on('click', '.addBomGridBtn', function () {
+                var markUp = $('.BomGridFields:eq( 0 )').clone();
+                $('.BomGridContent').append(markUp).find(".BomGridFields:eq( -1 ) input[type='text'] ,.BomGridFields:eq( -1 ) select option:contains('Please select one')").val('').prop('selected', true);
+                var rowNumber = $('#bomBody tr').length;
+                $('#RowNumber').val(rowNumber);
+        });
+
+
+               $(document).on('click', '.deleteBomGridBtn', function () {
+
+            if (confirm('Are you sure to delete this record?') == true) {
+                var tranId = ($('.BomGridContent input:checkbox:checked').map(function () { return this.value; }).get().join(','));
+                var ProductName = $('#ProductName').val();
+                var CategoryId = $("#CategoryId option:selected").val();
+                var ProductPrice = $('#ProductPrice').val();
+                $('.BomGridContent input:checkbox:checked').each(function () {
+
+                    if ($('.allBomGridCheck').is(':checked')) {
+
+                        var oldValue = $(this).parents('.BomGridFields').find('.BomGridFields:eq( -1 ) input[type="text"]').val();
+                        $(this).parents('.BomGridContent').find('.BomGridFields:gt( 0 )').remove();
+                        $('input[type="checkbox"]').prop('checked', false);
+                    } else {
+
+                        var oldValue = $(this).parents('.BomGridFields').find('.BomGridFields:eq( -1 ) input[type="text"]').val();
+                        $(this).parents('.BomGridFields').remove();
+                        $(this).parents('.BomGridContent').find('.BomGridFields:gt( 0 )').remove();
+                    }
+                });
+                $.ajax({
+                    url: '/Product/Delete',
+                    type: 'POST',
+                    data: {
+                        'GridTranId': tranId,
+                        'ProductName': ProductName,
+                        'CategoryId': CategoryId,
+                        'ProductPrice': ProductPrice
+
+                    },
+                    success: function (result) {
+
+                        $('.alert-danger').show();
+                        $('.success-msg').text(result);
+
+                        if (result === "All DATA DELETED!!!") {
+                            window.setTimeout(function () {
+                                window.location.href = '@Url.Action("Create", "Product")';
+                            }, 1200);
+                        }
+                    }
+                });
+                return;
+            }
+        });
+        //Row select or check
+        $(document).on('click', '.allBomGridCheck', function () {
+            if (this.checked) {
+                $('.BomGridContent input:checkbox').prop('checked', true);
+            }
+            else {
+                $('.BomGridContent input:checkbox').prop('checked', false);
+            }
+        });
+        $(document).on('click', '.singleBomGridCheck', function () {
+            if ($('.singleBomGridCheck:checked').length == $('.singleBomGridCheck').length) {
+                $('.allBomGridCheck:checkbox').prop('checked', true);
+            } else {
+                $('.allBomGridCheck:checkbox').prop('checked', false);
+            }
+        });
+        //Enable or Disable Delete Button
+        $(document).on('click', '.allBomGridCheck, .singleBomGridCheck', function (event) {
+            if ($(event.target).is(':checked')) {
+                $('.deleteBomGridBtn').prop('disabled', false);
+            }
+            if ($('.singleBomGridCheck').length == $('.singleBomGridCheck:checkbox:not(":checked")').length) {
+                $('.deleteBomGridBtn').prop('disabled', true);
+            }
+        });
+    </script>
+}

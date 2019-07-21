@@ -1,0 +1,351 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-uppercase">Advance Criteria</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-3">
+                                Item
+                                <input type="radio" id="itemc" name="yes" value="1" />
+                            </label>
+
+                            <div class="col-sm-12 col-md-9" id="itm">
+                                <select id="ddlitem" class="form-control">
+                                    <option value="0">All Item</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                Product
+                                <input type="radio" id="prod" name="yes" value="2" />
+                            </label>
+                            <div class="col-sm-12 col-md-7" id="prd">
+                                <select id="ddlproduct" class="form-control">
+                                    <option value="0">All Product</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                From Date
+                            </label>
+                            <div class="col-sm-12 col-md-7">
+                                <input type="date" id="fromdate" class="form-control" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-12 col-md-5">
+                                To Date
+                            </label>
+                            <div class="col-sm-12 col-md-7">
+                                <input type="date" id="todate" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success waves-effect waves-light m-1" onclick="allDamage()"><i class="fa fa-search"></i>Search</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light m-1" onclick="printContent('box');"> <i class="fa fa-home"></i>Print</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light m-1" onclick="Refres()"><i aria-hidden="true" class="fa fa-window-close"></i>Cancel</button>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" id="box">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Damage Information</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tbl" class="paginated table table-bordered dataTable noprint" role="grid" aria-describedby="default-datatable_info">
+                                    <thead></thead>
+                                    <tbody></tbody>
+                                    <tfoot></tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            damageitem();
+            damageproduct();
+            $("#ddlitem").attr("disabled", true)
+            $("#ddlproduct").attr("disabled", true)
+        });
+
+
+        $("input[name='yes']").click(function () {
+            if ($("input[name='yes']:checked").val() == 1) {
+                $("#ddlitem").attr("disabled", false)
+                $("#ddlproduct").attr("disabled", true)
+            }
+            else if ($("input[name='yes']:checked").val() == 2) {
+                $("#ddlproduct").attr("disabled", false)
+                $("#ddlitem").attr("disabled", true)
+            }
+        })
+      
+
+
+        function damageitem() {
+            $.ajax({
+
+                url: "/DamageReport/Getdamageitem",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#ddlitem").empty().append("<option value=0>All Item</option>");
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlitem").append("<option value=" + data[i].ItemId + ">" + data[i].ItemName + "</option>")
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+        function damageproduct() {
+            $.ajax({
+
+                url: "/DamageReport/Getdamageproduct",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#ddlproduct").empty().append("<option value=0>All Product</option>");
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlproduct").append("<option value=" + data[i].ProductId + ">" + data[i].ProductName + "</option>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+        function allDamage() {
+            var itemid;
+            var productid;
+            if ($('#ddlitem').is(':disabled')) {
+                itemid = null;
+            } else {
+                itemid = $("#ddlitem").val();
+            }
+            if ($('#ddlproduct').is(':disabled')) {
+                productid = null;
+            } else {
+                productid = $("#ddlproduct").val();
+            }
+
+            var fromdate; 
+            var todate;
+
+            if ($("#fromdate").val() == "") {
+                fromdate = null;
+            }
+            else {
+                fromdate = $("#fromdate").val();
+            }
+            if ($("#todate").val() == "") {
+                todate = null;
+            }
+            else {
+                todate = $("#todate").val();
+            }
+            console.log(fromdate);
+            $.ajax({
+
+                url: "/DamageReport/GetdamageRepo?itmid=" + itemid + "&productid=" + productid + "&fromdate=" + fromdate + "&todate=" + todate,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#tbl tbody").empty();
+                    $("#tbl thead").empty();
+                    $("#tbl tfoot").empty();
+                    var quantitytotal =0;
+                    for (var i = 0; i < data.length; i++) {
+
+                        itemid = data[i].ItemId;
+                       
+
+                        var Damagedate;
+                        if (data[i].DamageDate != null) {
+                            var da = new Date(parseInt(data[i].DamageDate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            Damagedate = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            Damagedate = null
+                        }
+                        var dateofpurchase;
+                        if (data[i].DateOfPurchase != null) {
+                            var da = new Date(parseInt(data[i].DateOfPurchase.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            dateofpurchase = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            dateofpurchase = null
+                        }
+
+                        if (data[i].ItemId > 0) {
+
+                            quantitytotal += data[i].DamageQuantity
+                            $("#tbl tbody").append("<tr><td>" + data[i].ItemName + "</td><td>" + data[i].DamageQuantity + "</td><td>" +
+                                Damagedate + "</td><td id='unittype'>" + dateofpurchase + "</td><td>" + data[i].DamagedItemType + "</td></tr>")
+                        }
+                        else {
+                            quantitytotal += data[i].DamageQuantity
+                            $("#tbl tbody").append("<tr><td>" + data[i].ProductName + "</td><td>" + data[i].DamageQuantity + "</td><td>" +
+                                Damagedate + "</td><td>" + dateofpurchase + "</td><td>" + data[i].DamagedItemType + "</td></tr>")
+                        }
+                    }
+                    pagination();
+                    var itemid;
+                    if (itemid > 0) {
+                        $("#tbl thead").append("<tr><td>Item Name</td><td>Damage Quantity</td><td>Damage Date</td><td>Purchase Date</td><td>Damage Type</td></tr>")
+                        $("#tbl tfoot").append("<tr><td>Total</td><td>" + quantitytotal +"</td><td colspan='3'></td></tr>")
+                    }
+                    else {
+                        $("#tbl thead").append("<tr><td>Product Name</td><td>Damage Quantity</td><td>Damage Date</td><td>Purchase Date</td><td>Damage Type</td></tr>")
+                        $("#tbl tfoot").append("<tr><td>Total</td><td>" + quantitytotal + "</td><td colspan='3'></td></tr>")
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+
+        function pagination() {
+            $('table.paginated').each(function () {
+                var table = $("#tbl")
+                var itemsPerPage = 5;
+                var currentPage = 0;
+                var pages = Math.ceil(table.find("tr:not(:has(th))").length / itemsPerPage);
+                table.bind('repaginate', function () {
+                    if (pages > 1) {
+                        var pager;
+                        if (table.next().hasClass("pager"))
+                            pager = table.next().empty(); else
+                            pager = $('<div class="pager btn-group m-1" style="padding-top: 20px; " align="center"></div>');
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"></span>').text('  First ').bind('click', function () {
+                            currentPage = 0;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light">  Prev </span>').bind('click', function () {
+                            if (currentPage > 0)
+                                currentPage--;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        var startPager = currentPage > 2 ? currentPage - 2 : 0;
+                        var endPager = startPager > 0 ? currentPage + 3 : 5;
+                        if (endPager > pages) {
+                            endPager = pages;
+                            startPager = pages - 5; if (startPager < 0)
+                                startPager = 0;
+                        }
+
+                        for (var page = startPager; page < endPager; page++) {
+                            $('<span id="pg' + page + '" class="' + (page == currentPage ? 'btn btn-outline-success waves-effect waves-light' : 'btn btn-outline-success waves-effect waves-light') + '"></span>').text(page + 1).bind('click', {
+                                newPage: page
+                            }, function (event) {
+                                currentPage = event.data['newPage'];
+                                table.trigger('repaginate');
+                            }).appendTo(pager);
+                        }
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Next  </span>').bind('click', function () {
+                            if (currentPage < pages - 1)
+                                currentPage++;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Last  </span>').bind('click', function () {
+                            currentPage = pages - 1;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        if (!table.next().hasClass("pager"))
+                            pager.insertAfter(table);
+                        //pager.insertBefore(table);
+
+                    }// end table.bind('repaginate', function () { ...
+
+                    table.find(
+                        'tbody tr:not(:has(th))').hide().slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).show();
+                });
+
+                table.trigger('repaginate');
+            });
+        }
+
+
+        function printContent(el) {
+            var restorepage = $('body').html();
+            var printcontent = $('#' + el).clone();
+            $('body').empty().html(printcontent);
+            window.print();
+            $('body').html(restorepage);
+        }
+
+        function Refres() {
+            location.reload();
+        }
+    </script>
+
+
+}

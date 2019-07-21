@@ -1,0 +1,85 @@
+﻿@model Domain.ViewModels.CelebrationViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Update Province Information</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="col-md-10 col-md-offset-1" style="margin-top:15px;">
+
+                            <div class="form-horizontal">
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group" style="margin-bottom:5px;">
+                                    @Html.LabelFor(model => model.CelebrationName, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.CelebrationName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.CelebrationName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                           
+                                     @Html.LabelFor(model => model.CelebrationType, htmlAttributes: new { @class = "control-label col-md-4" })
+                                   
+                                  
+                                    <div class="col-md-8">
+
+                                        <div class="col-md-5">
+
+                                            @Html.RadioButtonFor(model => model.CelebrationType, "National")
+                                            @Html.Label("National", htmlAttributes: new { @class = "control-label" })
+                                        </div>
+                                        <div class="col-md-7">
+
+                                            @Html.RadioButtonFor(model => model.CelebrationType, "International")
+                                            @Html.Label("International", htmlAttributes: new { @class = "control-label" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-4 col-md-8">
+                                        <input type="submit" value="Save" class="btn btn-default" />
+                                        <a href="@Url.Action("Index", "Celebration")" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

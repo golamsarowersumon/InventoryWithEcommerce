@@ -1,0 +1,351 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="modal fade" id="modal-animation-3" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated zoomInUp">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" id="producprint">
+                Product Name:&nbsp;<label id="prdname"><b></b></label>&nbsp;&nbsp; Product Quantity:&nbsp;<label id="PrdQuantity"><b></b></label>
+                <br />
+                Production Date:&nbsp;<label id="prodate"><b></b></label>
+                <table id="tblitem" class="table table-bordered" >
+                    <thead>
+                        <tr>
+
+                            <th class="sorting_asc">
+                                Item Name
+                            </th>
+                            <th  class="sorting_asc">
+                                Item Quantity
+                            </th>
+                            <th class="sorting_asc">
+                                Item Cost
+                            </th>
+                            <th class="sorting_asc">
+                                Sub Total
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" id="unittype" class="sorting_asc">
+                                Total
+                            </th>
+                           
+                            <td class="sorting_asc">
+                                <p id="total"></p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary waves-effect waves-light m-1" onclick="printContent('producprint');"> <i class="fa fa-home"></i>Print</button>
+                <button type="button" class="btn btn-danger" onclick="Refres()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="col-sm-12 col-md-4">
+                    <i class="fa fa-table"></i> Product Information
+                    <button type="button" class="btn btn-primary waves-effect waves-light m-1" onclick="printContent('box');"> <i class="fa fa-home"></i>Print</button>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <div class="search-bar">
+                        <input type="search" id="productionsearch" class="form-control" placeholder="Enter keywords">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body" id="box">
+
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <table id="tbl" class="paginated table table-bordered dataTable" role="grid" aria-describedby="default-datatable_info">
+                                    <thead>
+                                        <tr>
+
+                                            <th id="itemname" class="sorting_asc">
+                                                Product Name
+                                            </th>
+                                            <th id="procuretype" class="sorting_asc">
+                                                Product Quantity
+                                            </th>
+                                            <th id="procuredate" class="sorting_asc">
+                                                Product Price
+                                            </th>
+                                            <th id="unittype" class="sorting_asc">
+                                                Production Date
+                                            </th>
+                                            <th id="unittype" class="sorting_asc">
+                                                Details
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                Total
+                                            </td>
+                                            <td><p id="pquantity"></p></td>
+                                            <td><p id="pprice"></p></td>
+                                            <td colspan="2"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            allproduct();
+
+        })
+
+
+        $("#productionsearch").keyup(function () {
+
+            var valuelength = $("#productionsearch").val().length;
+            console.log(valuelength);
+            if (valuelength > 0) {
+                var value = $(this).val().toLowerCase();
+
+                $("#tbl tbody tr").filter(function () {
+
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            } else {
+                pagination();
+            }
+        });
+
+
+
+
+
+
+
+        function allproduct() {
+            $.ajax({
+
+                url: "/ProductionReport/GetProduct",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    var proqty = 0;
+                    var proprice = 0;
+                    for (var i = 0; i < data.length; i++) {
+
+                        proqty += data[i].ProductionQuantity;
+                        proprice += data[i].ProductPrice;
+
+                        var productiondate;
+                        if (data[i].Productiondate != null) {
+                            var da = new Date(parseInt(data[i].Productiondate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            productiondate = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            productiondate = null
+                        }
+
+                        $("#tbl tbody").append("<tr><td id='itemname'>" + data[i].ProductName + "</td><td id='procuretype'>" + data[i].ProductionQuantity + "</td><td id='procuredate'>" +
+                            data[i].ProductPrice + "</td><td id='unittype'>" + productiondate + "</td><td>" + "<button class='btn btn-success btn-sm waves-effect waves-light m -1' onclick='viewRawmeterial(" + data[i].ProductionMasterId + ")'>Raw Material Details</button>" + "</td></tr>")
+                    }
+
+                    $("#pquantity").html(proqty.toFixed(3));
+                    $("#pprice").html(proprice.toFixed(3));
+
+                    pagination();
+
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+        function viewRawmeterial(id) {
+            $.ajax({
+
+                url: "/ProductionReport/GetRawmaterialProductionwise?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#modal-animation-3").modal("toggle");
+                    $("#tblitem tbody").empty();
+                    
+                    var Total = 0;
+                    
+
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        var productiondate;
+                        if (data[i].Productiondate != null) {
+                            var da = new Date(parseInt(data[i].Productiondate.replace("/Date(", "").replace(")/", ""), 10));
+
+
+                            var date = JSON.stringify(da)
+                            productiondate = date.slice(1, 11)
+
+                        }
+                        else {
+
+                            productiondate = null
+                        }
+                        var subtotal = data[i].ItemCost * data[i].ItemQuantity
+                        Total += data[i].ItemCost * data[i].ItemQuantity
+
+                      
+                        $("#tblitem tbody").append("<tr><td>" + data[i].ItemName + "</td><td>" + data[i].ItemQuantity +"</td><td>" + data[i].ItemCost +
+                            "</td><td>" + data[i].ItemCost * data[i].ItemQuantity + "</td></tr>")
+                        $("#prdname").text(data[i].ProductName)
+                        $("#PrdQuantity").text(data[i].ProductionQuantity)
+                        $("#prodate").text(productiondate)
+                    }
+                   
+
+                    $("#total").html(Total.toFixed(3));
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+
+        function pagination() {
+            $('table.paginated').each(function () {
+                var table = $("#tbl")
+                var itemsPerPage = 5;
+                var currentPage = 0;
+                var pages = Math.ceil(table.find("tr:not(:has(th))").length / itemsPerPage);
+                table.bind('repaginate', function () {
+                    if (pages > 1) {
+                        var pager;
+                        if (table.next().hasClass("pager"))
+                            pager = table.next().empty(); else
+                            pager = $('<div class="pager btn-group m-1" style="padding-top: 20px; direction:ltr; " align="center"></div>');
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"></span>').text('  First ').bind('click', function () {
+                            currentPage = 0;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light">  Prev </span>').bind('click', function () {
+                            if (currentPage > 0)
+                                currentPage--;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        var startPager = currentPage > 2 ? currentPage - 2 : 0;
+                        var endPager = startPager > 0 ? currentPage + 3 : 5;
+                        if (endPager > pages) {
+                            endPager = pages;
+                            startPager = pages - 5; if (startPager < 0)
+                                startPager = 0;
+                        }
+
+                        for (var page = startPager; page < endPager; page++) {
+                            $('<span id="pg' + page + '" class="' + (page == currentPage ? 'btn btn-outline-success waves-effect waves-light' : 'btn btn-outline-success waves-effect waves-light') + '"></span>').text(page + 1).bind('click', {
+                                newPage: page
+                            }, function (event) {
+                                currentPage = event.data['newPage'];
+                                table.trigger('repaginate');
+                            }).appendTo(pager);
+                        }
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Next  </span>').bind('click', function () {
+                            if (currentPage < pages - 1)
+                                currentPage++;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Last  </span>').bind('click', function () {
+                            currentPage = pages - 1;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        if (!table.next().hasClass("pager"))
+                            pager.insertAfter(table);
+                        //pager.insertBefore(table);
+
+                    }// end table.bind('repaginate', function () { ...
+
+                    table.find(
+                        'tbody tr:not(:has(th))').hide().slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).show();
+                });
+
+                table.trigger('repaginate');
+            });
+        }
+
+
+        function printContent(el) {
+            var restorepage = $('body').html();
+            var printcontent = $('#' + el).clone();
+            $('body').empty().html(printcontent);
+            window.print();
+            $('body').html(restorepage);
+        }
+
+        function Refres() {
+            location.reload();
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+}

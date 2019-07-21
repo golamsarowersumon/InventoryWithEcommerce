@@ -1,0 +1,60 @@
+﻿@model Domain.ViewModels.RawMaterialsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Details of State Record</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-md-offset-2" style="margin-top:15px;">
+                        <table class="table table-responsive table-hover">
+                            <tr>
+
+                                <th>@Html.Label("Item Name", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.ItemName)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.Label("Item Element Name", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.ItemElementName)</td>
+
+                            </tr>
+
+
+
+                        </table>
+
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <div class="form-actions no-color">
+
+
+                            <a href="@Url.Action("Edit", "RawMaterials", new { id = Model.RawMaterialId })" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span> Edit
+                            </a>
+                            <a href="@Url.Action("Index", "RawMaterials")" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

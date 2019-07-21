@@ -1,0 +1,676 @@
+﻿@model Domain.ViewModels.TransferViewModel
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    if (TempData.ContainsKey("OperationMessage") && !string.IsNullOrWhiteSpace(TempData["OperationMessage"].ToString()))
+    {
+        //vMessage = TempData["OperationMessage"].ToString();
+        <script type="text/javascript">
+            window.onload = function () {
+
+                 alert('@TempData["OperationMessage"]');
+            };
+        </script>
+    }
+}
+
+
+
+
+
+
+<div class="modal fade show" id="infomodal" style="display: none; padding-right:10px;" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content border-info">
+            <div class="modal-header bg-info">
+                <h5 class="modal-title text-white">Your modal title here</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-5 col-sm-12">Order Id</label>
+                            <label class="col-md-7 col-sm-12" id="OrderId"></label>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-12">From Store</label>
+                            <label class="col-md-8 col-sm-12" id="FStore"></label>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <label class="col-md-4 col-sm-12">To Store</label>
+                            <label class="col-md-8 col-sm-12" id="ToStore"></label>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                        <div class="row">
+                        
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="col-md-4 col-sm-12">Item Name</label>
+                                    <label class="col-md-8 col-sm-12" id="ItemName"></label>
+
+                                </div>
+                             </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="col-md-4 col-sm-12">Quantity</label>
+                                    <label class="col-md-8 col-sm-12" id="ItmQuantity"></label>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="col-md-5 col-sm-12">Unit</label>
+                                    <label class="col-md-7 col-sm-12" id="UnitName"></label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-5 col-sm-12">Condition</label>
+                            <label class="col-md-7 col-sm-12" id="ConditionOfItem"></label>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-12">Transfer Type</label>
+                            <label class="col-md-8 col-sm-12" id="TransferType"></label>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <label class="col-md-4 col-sm-12">Order Date</label>
+                            <label class="col-md-8 col-sm-12" id="OrderDate"></label>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-5 col-sm-12">Delivery Date</label>
+                            <label class="col-md-7 col-sm-12" id="ODeliveryDate"></label>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-12">Order By</label>
+                            <label class="col-md-8 col-sm-12" id="TransferOrderBy"></label>
+
+                        </div>
+                      </div>
+
+                    
+                </div>
+
+               </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-info" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <button type="button" class="btn btn-info"><i class="fa fa-check-square-o"></i> Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <div class="panel panel-success ">
+                <div class="panel-heading"><div class="panel-title">Right Of Access </div></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <fieldset>
+                                <legend>Transfer Criteria</legend>
+
+                                <div class="form-group">
+                                    <div class="col-md-5">
+                                        @Html.RadioButtonFor(model => model.TransferCriteria, "Order")
+                                        @Html.Label("Order Information", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.RadioButtonFor(model => model.TransferCriteria, "Received")
+                                        @Html.Label("Receive", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.RadioButtonFor(model => model.TransferCriteria, "Pending")
+                                        @Html.Label("Pending", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.RadioButtonFor(model => model.TransferCriteria, "Canceled")
+                                        @Html.Label("Canceled", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <fieldset>
+                                <legend>Search Criteria</legend>
+
+                                <div class="form-group">
+                                    <div class="col-md-2" style="margin:0px;padding-right:0px;">
+                                        @Html.RadioButtonFor(model => model.StoreCriteria, "Store", new { @class = "chkStore" })
+                                        @Html.Label("Store", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-2">
+
+                                        @Html.RadioButtonFor(model => model.ItemCriteria, "Item", new { @class = "chkItem" })
+                                        @Html.Label("Item", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.RadioButtonFor(model => model.ProductCriteria, "Product", new { @class = "chkProduct" })
+                                        @Html.Label("Product", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        @Html.RadioButtonFor(model => model.TransTypeCriteria, "TransferType", new { @class = "chkTransferType" })
+                                        @Html.Label("Transfer Type", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+
+                                    <div class="col-md-2">
+
+                                        @Html.RadioButtonFor(model => model.DateCriteria, "Date", new { @class = "chkDate" })
+                                        @Html.Label("Date", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.RadioButtonFor(model => model.ConditionCriteria, "Condition", new { @class = "chkCondition" })
+                                        @Html.Label("Condition", htmlAttributes: new { @class = "control-label" })
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </fieldset>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset>
+                                <legend>Select Searching Source to Search </legend>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvStore">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ToStoreId, htmlAttributes: new { @class = "control-label fontsize mt8" })
+                                        @Html.DropDownListFor(model => model.ToStoreId, ViewBag.StoreList as SelectList, "Select Store", new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvItem">
+                                    <div class="form-group">
+
+                                        @Html.LabelFor(model => model.ItemId, htmlAttributes: new { @class = "control-label fontsize mt8" })
+                                        @Html.DropDownListFor(model => model.ItemId, ViewBag.ItemList as SelectList, "Select Item", new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvProduct">
+                                    <div class="form-group">
+
+                                        @Html.LabelFor(model => model.ItemId, htmlAttributes: new { @class = "control-label fontsize mt8" })
+                                        @Html.DropDownListFor(model => model.ItemId, ViewBag.ItemList as SelectList, "Select Product", new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvTransferType">
+                                    <div class="form-group">
+
+                                        @Html.LabelFor(model => model.TransferTypeId, htmlAttributes: new { @class = "control-label fontsize mt8" })
+                                        @Html.DropDownListFor(model => model.TransferTypeId, ViewBag.TransferTypeList as SelectList, "Select Transfer Type", new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvConditionOfItem">
+                                    <div class="form-group">
+
+                                        @Html.LabelFor(model => model.ConditionOfItemId, htmlAttributes: new { @class = "control-label fontsize mt8" })
+                                        @Html.DropDownListFor(model => model.ConditionOfItemId, ViewBag.ConditionList as SelectList, "Select Item", new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+                                <div id="dvDate">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.FromDate, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="dvDate">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.ToDate, htmlAttributes: new { @class = "control-label" })
+                                            @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+
+                            <div class="form-group">
+                                <button class="btn btn-md btn-info pull-left" ttype="submit" name="search" value="Search"
+                                        formaction="Search" formmethod="post" id="btnSearch">
+                                    <i class="fa fa-save"></i> Receive
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            @if (Model == null)
+                {
+
+
+                }
+                else
+                {
+
+                <div class="card">
+
+                    <div class="card-body">
+
+
+                        @if (Model.TransferViewModelList.Any())
+                        {
+
+                            <div class="table-responsive">
+                                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+
+                                    <table id="tbl" class="paginated table table-bordered dataTable" role="grid" aria-describedby="default-datatable_info">
+                                        <thead>
+                                            <tr>
+
+                                                <th id="itemname" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    <input type="checkbox" class="allGridCheck">
+                                                </th>
+                                                <th>TransferId</th>
+                                                <th id="procuretype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                   Transfer Details Id
+                                                </th>
+                                                <th id="procuretype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Transfer Order Id
+                                                </th>
+
+                                                <th id="procuretype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    From Store Name
+                                                </th>
+                                                
+                                                <th id="procuredate" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    To Store Name
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Item Name
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Transaction Quantity
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Unit Name
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Transfer Type Name
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Conditon Of Item
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Transfer Date
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Order Status
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                   Receive By
+                                                </th>
+
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Receive Quantity
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                    Pending Quantity
+                                                </th>
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                   Receive Date
+                                                </th>
+
+                                                <th id="unittype" class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" >
+                                                    Action
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+                                            @for (int i = 0; i < Model.TransferViewModelList.Count; i++)
+                                            {
+
+                                                <tr class="GridFields">
+                                                    <td>@Html.CheckBoxFor(m => m.TransferViewModelList[i].IsChecked, new { @class = "singleGridCheck" })</td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].TransferId
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].TransferDetailsId
+                                                    </td>
+                                                    <td ><a href="#" onclick="LoadOrder(@Model.TransferViewModelList[i].TransferOrderId)">@Model.TransferViewModelList[i].TransferOrderId</a>
+                                                   </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].FromStoreName
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].ToStoreName
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].ItemName
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].TransactionQuantity
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].UnitName
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].TransferTypeName
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].ConditionOfItemName
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].DateOfActualTransfer
+
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].Recieve
+
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].RecieveBy
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].ReceiveItemQuantity
+
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].PendingItemQuantity
+
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].DateOfReceive
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferViewModelList[i].Recieve
+
+                                                    </td>
+
+                                                </tr>
+                                            }
+
+
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+
+
+
+
+
+
+        </div>
+    </div>
+
+    
+}
+
+
+@section Scripts {
+
+    <script>
+        $("#dvStore").hide();
+        $("#dvItem").hide();
+        $("#dvProduct").hide();
+        $("#dvTransferType").hide();
+        $("#dvDate").hide();
+        $("#dvConditionOfItem").hide();
+        $('.chkStore').prop('checked', false);
+        $('.chkItem').prop('checked', false);
+        $('.chkProduct').prop('checked', false);
+        $('.chkTransferType').prop('checked', false);
+        $('.chkCondition').prop('checked', false);
+        $('.chkDate').prop('checked', false);
+
+
+        var radioArray = new Array(2);
+        $('.chkStore').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvStore").hide();
+                $(this).prop('checked', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvStore").show();
+                $(this).prop('checked', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+
+        $('.chkItem').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvItem").hide();
+                $(this).prop('checked', false);
+                $("#ProductCriteria").attr('disabled', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvItem").show();
+                $(this).prop('checked', true);
+                $("#ProductCriteria").attr('disabled', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+
+        $('.chkProduct').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvProduct").hide();
+                $(this).prop('checked', false);
+                $("#ItemCriteria").attr('disabled', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvProduct").show();
+                $(this).prop('checked', true);
+                $("#ItemCriteria").attr('disabled', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+
+
+        $('.chkTransferType').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvTransferType").hide();
+                $(this).prop('checked', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvTransferType").show();
+                $(this).prop('checked', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+
+        $('.chkCondition').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvConditionOfItem").hide();
+                $(this).prop('checked', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvConditionOfItem").show();
+                $(this).prop('checked', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+        $('.chkDate').click(function () {
+            radioId = $(this).attr('id');
+            if (radioArray[radioId] == 1) {
+                $("#dvDate").hide();
+                $(this).prop('checked', false);
+                radioArray[radioId] = 0; // changing the value of given key of array
+            }
+            else {
+                $("#dvDate").show();
+                $(this).prop('checked', true);
+                radioArray[radioId] = 1; // changing the value of given key of array
+            }
+        });
+
+        function LoadOrder(id) {
+            //console.log(id);
+            //alert(id);
+            var Orderid = id;
+            $("#infomodal").modal("toggle");
+            $("#modaldiv").text();
+
+            if (Orderid) {
+                    $.ajax({
+                        type: "Post",
+                        url: '@Url.Action("GetOrderInformation", "TransferOrder")',
+                        data: {
+                            TransferOrderId: Orderid
+                        },
+
+                        success: function (data) {
+                            console.log(data);
+
+                            $.each(data, function (key, value) {
+                                var da = new Date(parseInt(value.TransferOrderDeliverydate.replace("/Date(", "").replace(")/", ""), 10));
+                                let TDdate = JSON.stringify(da);
+                                TDdate = TDdate.slice(1, 11);
+                                var dab = new Date(parseInt(value.TransferOrderdate.replace("/Date(", "").replace(")/", ""), 10));
+                                let TOdate = JSON.stringify(dab);
+                                TOdate = TOdate.slice(1, 11);
+                               
+                                $("#OrderId").text(Orderid); 
+                                $("#ItemName").text(value.ItemName); 
+                                $("#ItmQuantity").text(value.TransactionQuantity);
+                                $("#FStore").text(value.FromStoreName); 
+                                $("#ToStore").text(value.ToStoreName); 
+                                $("#UnitName").text(value.UnitName); 
+                                $("#ConditionOfItem").text(value.ConditionOfItemName); 
+                                $("#TransferType").text(value.TransferTypeName); 
+
+                                $("#OrderDate").text(TOdate); 
+                                $("#ODeliveryDate").text(TDdate); 
+                                $("#TransferOrderBy").text(value.TransferOrderby); 
+                                
+ });
+                        }
+                });
+
+
+            }
+        }
+
+
+    </script>
+
+
+}
+

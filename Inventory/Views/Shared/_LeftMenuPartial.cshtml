@@ -1,0 +1,121 @@
+﻿ @model IEnumerable<Domain.ViewModels.MenuViewModel>
+<!--Start sidebar-wrapper-->
+<div id="sidebar-wrapper" class="bg-theme bg-theme2" data-simplebar="" data-simplebar-auto-hide="true">
+   
+   
+
+
+    <div class="user-details">
+        <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown" aria-expanded="false">
+            @*<div class="avatar">
+            @if (ViewBag.EmployeeImage.ImageFileNameBase64 != null)
+            {
+                <img class="mr-3 side-user-img" src="@ViewBag.EmployeeImage.ImageFileNameBase64" alt="user avatar">
+            }
+            </div>*@
+            <div class="media-body">
+                <h6 class="side-user-name">Mark Jhonsan</h6>
+            </div>
+        </div>
+        <div id="user-dropdown" class="collapse" style="">
+            <ul class="user-setting-menu">
+                <li><a href="javaScript:void();"><i class="icon-user"></i>  My Profile</a></li>
+                <li><a href="javaScript:void();"><i class="icon-settings"></i> Setting</a></li>
+                <li><a href="javaScript:void();"><i class="icon-power"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <ul class="sidebar-menu do-nicescrol">
+
+     @foreach (var mainMenu in ViewBag.MainMenuList)
+            {
+        <li>
+            @if (mainMenu.MenuName != null && mainMenu.MenuURL != "#")
+            {
+
+                <a href="@mainMenu.MenuURL" class="waves-effect">
+                    <i class="zmdi zmdi-view-dashboard"></i> <span>@mainMenu.MenuName</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+            }
+
+            else if (mainMenu.MenuName != null && mainMenu.MenuURL == "#")
+            {
+
+                <a href="@mainMenu.MenuURL" class="waves-effect">
+                    <i class="zmdi zmdi-view-dashboard"></i> <span>@mainMenu.MenuName</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="sidebar-submenu">
+                    @foreach (var subMenu in ViewBag.SubMenuList)
+                    {
+
+
+                        if (subMenu.MainMenuId == mainMenu.MainMenuId && subMenu.SubMenuURL != "#")
+                        {
+                            <li>
+                                <a href="@subMenu.SubMenuURL"><i class="zmdi zmdi-long-arrow-right"></i>@subMenu.SubMenuName</a>
+                            </li>
+
+                        }
+
+
+                        else if (subMenu.MainMenuId == mainMenu.MainMenuId && subMenu.SubMenuURL == "#")
+                        {
+                            <li>
+                                <a href="@subMenu.SubMenuURL"><i class="zmdi zmdi-long-arrow-right"></i>@subMenu.SubMenuName</a>
+                                <ul class="sidebar-submenu">
+                                    @foreach (var subsubMenu in ViewBag.SubSubMenuList)
+                                    {
+
+                                        if (subMenu.SubMenuId == subsubMenu.SubMenuId)
+                                        {
+                                            <li>
+                                                <a href="@subsubMenu.SubSubMenuURL"><i class="zmdi zmdi-long-arrow-right"></i>@subsubMenu.SubSubMenuName</a>
+                                            </li>
+
+                                        }
+
+
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+                        else
+                        {
+
+                        }
+
+
+                    }
+
+                </ul>
+            }
+        </li>
+        }
+
+
+
+
+
+        <li class="sidebar-header">MAIN NAVIGATION</li>
+        <li>
+            <a href="javaScript:void();" class="waves-effect">
+                <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span><i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="sidebar-submenu">
+                <li><a  href="@Url.Action("Index","MenuMain")"><i class="zmdi zmdi-long-arrow-right"></i> Main Menu</a></li>
+                <li><a href="@Url.Action("Index","MenuSub")"><i class="zmdi zmdi-long-arrow-right"></i> Menu Sub</a></li>
+                <li><a href="@Url.Action("Index","MenuSubSub")"><i class="zmdi zmdi-long-arrow-right"></i> MenuSubSub</a></li>
+                <li><a href="@Url.Action("Index","Role")"><i class="zmdi zmdi-long-arrow-right"></i> Role</a></li>
+                <li><a href="@Url.Action("AssignRoleToUser","Account")"><i class="zmdi zmdi-long-arrow-right"></i> Assign Role</a></li>
+               
+                
+            </ul>
+        </li>
+      
+      
+    </ul>
+
+</div>
+<!--End sidebar-wrapper-->

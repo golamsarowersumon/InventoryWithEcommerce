@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Domain.ViewModels.SubContractCompanyViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubContractCompanyName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubContractCompanyName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubContractCompanyId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SubContractCompanyId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SubContractCompanyId })
+        </td>
+    </tr>
+}
+
+</table>

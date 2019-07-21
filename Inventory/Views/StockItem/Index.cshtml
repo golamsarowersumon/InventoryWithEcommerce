@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row" id="box">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i>Stock Information</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tbl" class="paginated table table-bordered dataTable noprint" role="grid" aria-describedby="default-datatable_info">
+                                    <thead>
+                                        @*<tr>
+                                            <th>Item Name</th>
+                                            <th>Store Name</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Name</th>
+                                        </tr>*@
+                                    </thead>
+                                    <tbody></tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            loalallstock();
+
+        })
+
+
+
+        function loalallstock() {
+            $.ajax({
+                url: "/StockItem/GetStock",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    if (data.isRedirect) {
+                        window.location.href = data.redirectUrl;
+                    } else {
+
+                        $("#tbl tbody").empty();
+                        $("#tbl thead").empty();
+                        $.each(data, function (i, v) {
+                            storeName = v.StoreName;
+                            substoreName = v.SubStoreName;
+                            subsubstoreName = v.SubSubStoreName;
+                            subsubsubstoreName = v.SubSubSubStoreName;
+                            subsubsubsubstoreName = v.SubSubSubSubStoreName;
+                            if (storeName != null) {
+                                $("#tbl tbody").append(
+                                    "<tr><td>" + v.ItemName + "</td><td>" + v.StoreName + "</td><td>" + v.PO_QTD + "</td><td>" + v.UnitName + "</td></tr>"
+
+                                )
+                            } else if (substoreName != null) {
+                                $("#tbl tbody").append(
+                                    "<tr><td>" + v.ItemName + "</td><td>" + v.SubStoreName + "</td><td>" + v.PO_QTD + "</td><td>" + v.UnitName + "</td></tr>"
+
+                                )
+                            } else if (subsubstoreName != null) {
+                                $("#tbl tbody").append(
+                                    "<tr><td>" + v.ItemName + "</td><td>" + v.SubSubStoreName + "</td><td>" + v.PO_QTD + "</td><td>" + v.UnitName + "</td></tr>"
+
+                                )
+                            } else if (subsubsubstoreName != null) {
+                                $("#tbl tbody").append(
+                                    "<tr><td>" + v.ItemName + "</td><td>" + v.SubSubSubStoreName + "</td><td>" + v.PO_QTD + "</td><td>" + v.UnitName + "</td></tr>"
+
+                                )
+                            }
+                            else if (subsubsubsubstoreName != null) {
+                                $("#tbl tbody").append(
+                                    "<tr><td>" + v.ItemName + "</td><td>" + v.SubSubSubSubStoreName + "</td><td>" + v.PO_QTD + "</td><td>" + v.UnitName + "</td></tr>"
+
+                                )
+                            }
+                           
+                        })
+                        pagination();
+                        var storeName;
+                        var substoreName;
+                        var subsubstoreName;
+                        var subsubsubstoreName;
+                        var subsubsubsubstoreName;
+                        if (storeName != null) {
+                            $("#tbl thead").append(
+                                "<tr><td>Item Name</td><td>Store Name</td><td>Quantity</td><td>Unit Name</td></tr>"
+                            )
+                        } else if (substoreName != null) {
+                            $("#tbl thead").append(
+                                "<tr><td>Item Name</td><td>SubStore Name</td><td>Quantity</td><td>Unit Name</td></tr>"
+                            )
+                        } else if (subsubstoreName != null) {
+                            $("#tbl thead").append(
+                                "<tr><td>Item Name</td><td>SubSubStore Name</td><td>Quantity</td><td>Unit Name</td></tr>"
+                            )
+                        } else if (subsubsubstoreName != null) {
+                            $("#tbl thead").append(
+                                "<tr><td>Item Name</td><td>SubSubSubStore Name</td><td>Quantity</td><td>Unit Name</td></tr>"
+                            )
+                        } else if (subsubsubsubstoreName != null) {
+                            $("#tbl thead").append(
+                                "<tr><td>Item Name</td><td>SubSubSubSubSubStore Name</td><td>Quantity</td><td>Unit Name</td></tr>"
+                            )
+                        }
+
+
+                    }
+                   
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+        function pagination() {
+            $('table.paginated').each(function () {
+                var table = $("#tbl")
+                var itemsPerPage = 5;
+                var currentPage = 0;
+                var pages = Math.ceil(table.find("tr:not(:has(th))").length / itemsPerPage);
+                table.bind('repaginate', function () {
+                    if (pages > 1) {
+                        var pager;
+                        if (table.next().hasClass("pager"))
+                            pager = table.next().empty(); else
+                            pager = $('<div class="pager btn-group m-1" style="padding-top: 20px; " align="center"></div>');
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"></span>').text('  First ').bind('click', function () {
+                            currentPage = 0;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light">  Prev </span>').bind('click', function () {
+                            if (currentPage > 0)
+                                currentPage--;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        var startPager = currentPage > 2 ? currentPage - 2 : 0;
+                        var endPager = startPager > 0 ? currentPage + 3 : 5;
+                        if (endPager > pages) {
+                            endPager = pages;
+                            startPager = pages - 5; if (startPager < 0)
+                                startPager = 0;
+                        }
+
+                        for (var page = startPager; page < endPager; page++) {
+                            $('<span id="pg' + page + '" class="' + (page == currentPage ? 'btn btn-outline-success waves-effect waves-light' : 'btn btn-outline-success waves-effect waves-light') + '"></span>').text(page + 1).bind('click', {
+                                newPage: page
+                            }, function (event) {
+                                currentPage = event.data['newPage'];
+                                table.trigger('repaginate');
+                            }).appendTo(pager);
+                        }
+
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Next  </span>').bind('click', function () {
+                            if (currentPage < pages - 1)
+                                currentPage++;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+                        $('<span class="btn btn-outline-success waves-effect waves-light"> Last  </span>').bind('click', function () {
+                            currentPage = pages - 1;
+                            table.trigger('repaginate');
+                        }).appendTo(pager);
+
+                        if (!table.next().hasClass("pager"))
+                            pager.insertAfter(table);
+                        //pager.insertBefore(table);
+
+                    }// end table.bind('repaginate', function () { ...
+
+                    table.find(
+                        'tbody tr:not(:has(th))').hide().slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).show();
+                });
+
+                table.trigger('repaginate');
+            });
+        }
+
+    </script>
+
+}
+
+
+

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Domain.ViewModels.MenuViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i>Main Menu View</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3 col-md-3">
+                                        Show entries
+                                    </label>
+                                    <select class="form-control form-control-sm col-sm-3 col-md-3">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6 col-md-6" style="text-align:right">
+                                        Search:
+                                    </label>
+                                    <div class="col-sm-6 col-md-6">
+                                        <input type="search" class="form-control form-control-sm" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <a href="@Url.Action("Create", "MenuMain")" title="Create Company" class="btn btn-primary btn-square waves-effect waves-light m-1">Create</a>
+
+                            </div>
+                            <div class="col-sm-12">
+                                <table id="default-datatable" class="table table-bordered dataTable" role="grid" aria-describedby="default-datatable_info">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                @Html.DisplayNameFor(model => model.MainMenuId)
+                                            </th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                @Html.DisplayNameFor(model => model.MenuName)
+                                            </th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="default-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 141px;">
+                                                @Html.DisplayNameFor(model => model.MenuURL)
+                                            </th>
+                                            <th>Options</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr role="row" class="even">
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MainMenuId)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MenuName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MenuURL)
+                                            </td>
+                                            <td>
+
+                                                <a href="@Url.Action("Edit", "MenuMain", new { id = item.MainMenuId })" title="Edit Item" class="btn btn-sm btn-warning"><span class="fa fa-edit"></span></a>
+                                                @*<a href="@Url.Action("Details", "MenuMain", new { id = item.MainMenuId })" title="Details Item" class="btn btn-sm btn-success"><span class="fa fa-eye"></span></a>*@
+                                                <a href="@Url.Action("Delete", "MenuMain", new { id = item.MainMenuId })" title="Delete Item" class="btn btn-sm btn-danger"><span class="fa fa-trash"></span></a>
+
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,715 @@
+﻿
+@{
+    ViewBag.Title = "OldItemView";
+    Layout = "~/Views/Shared/_InitialLayout.cshtml";
+}
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" @*aria-hidden="true"*@>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Item Short View</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger" style="display:none">
+                    <p id="AlertMsg"></p>
+                </div>
+                <aside class="single_sidebar_widget popular_post_widget">
+                    <div class="media post_item">
+                        <div class="row">
+                            <div id="itmshortviewimg" class="col-md-6">
+
+                            </div>
+                            <div class="media-body col-md-6">
+                                Item Name: <span id="itmnameshow"></span>
+                                <br />
+                                Price: ৳<span id="priceshow"></span>
+                                <br />
+
+                                <div class="row">
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Quantity:&nbsp; <input id="purqty" type="number" min="1" style="width:25%" />
+                                    &nbsp;&nbsp;&nbsp;
+                                    <span id="unitname"></span>
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="modal-footer">
+                <div class="card_area">
+                    <a href="/CatagorywiseSales/AddCart" onclick="AddToCart()" class="main_btn">Buy Now</a>
+                    <a class="main_btn" onclick="AddToCart()">Add To Cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content d-md-flex justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <h2>Shop Category</h2>
+                    <p>Very us move be blessed multiply night</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="left_sidebar_area">
+                <aside class="left_widgets p_filter_widgets">
+                    <div class="l_w_title">
+                        <h3>Browse Categories</h3>
+                    </div>
+
+
+                    <div class="widgets_inner">
+                        <ul id="Catagoryid" class="list"></ul>
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+        <div class="col-lg-9">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="form-row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <select id="ddlbrandid" class="form-control">
+                                <option value=''>Selet Brand</option>
+                            </select>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <select id="ddlmodelid" class="form-control">
+                                <option value="">Select Model</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12">
+                            <input type="text" class="form-control" id="txtfromprice" placeholder="From Price" />
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12">
+                            <input type="text" class="form-control" id="txttoprice" placeholder="To Price" />
+                        </div>
+                        <input type="button" class="genric-btn white_bg_btn radius" value="Filter" onclick="FilteredView()" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="latest_product_inner" style="margin-top:17px;">
+                <div id="loaditemcat" class="row">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            loadCatagory();
+            AllItemCart();
+
+        })
+
+        function loadCatagory() {
+            $.ajax({
+
+                url: "/CatagorywiseSales/CatagoryLoad?itmtype=" + "old",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        $("#Catagoryid").append(
+                            "<li><a onclick='CatagoryWiseCart(" + data[i].CategoryId + ")' style='cursor:pointer;'>" + data[i].CategoryName + "</a></li>"
+                        )
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        function CatagoryWiseCart(id) {
+            $.ajax({
+
+                url: "/CatagorywiseSales/CatagoryWiseShow?id=" + id + "&itmtype=" + "old",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#loaditemcat").empty();
+
+                    for (var i = 0; i < data.length; i++) {
+                        $("#loaditemcat").append(
+                            "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='261' width='260' src=" + data[i].Product_Image +
+                            " alt=" + data[i].ItemName + " /><div class='p_icon'><a  href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+                            "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SalesPriceAmount +
+                            "</span></div></div></div></div>"
+                        )
+
+                        //data - toggle='tooltip' data - placement='top'
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+            BrandLoad(id)
+        }
+
+        var catId;
+        function BrandLoad(id) {
+
+            $.ajax({
+                url: "/CatagorywiseSales/Brandshow?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#ddlbrandid").empty().append("<option value=''>Selet Brand</option>");
+                    for (var i = 0; i < data.length; i++) {
+                        $("#ddlbrandid").append(" <option value=" + data[i].BrandId + ">" + data[i].BrandName + "</option>")
+                        catId = data[i].CategoryId
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+
+
+        $("#ddlbrandid").change(function () {
+            var brandid = null;
+            if ($("#ddlbrandid").val() != "") {
+                brandid = $("#ddlbrandid").val();
+            } else {
+
+                brandid = null;
+                catagorywiseitemview();
+            }
+
+
+            $.ajax({
+                url: "/CatagorywiseSales/Modelshow?id=" + brandid,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#ddlmodelid").empty().append("<option value=''>All Model</option>");
+                    for (var i = 0; i < data.length; i++) {
+
+
+                        $("#ddlmodelid").append(" <option value=" + data[i].ModelId + ">" + data[i].ModelName + "</option>")
+
+
+
+                    }
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+        //function catagorywiseitemview() {
+        //    $.ajax({
+                
+        //        url: "/CatagorywiseSales/CatagoryWiseShow?id=" + 0 + "&itmtype=" + "old",
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#loaditemcat").empty();
+
+        //            for (var i = 0; i < data.length; i++) {
+        //                $("#loaditemcat").append(
+        //                    "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='261' width='260' src=" + data[i].Product_Image +
+        //                    " alt=" + data[i].ItemName + " /><div class='p_icon'><a  href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+        //                    "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SalesPriceAmount +
+        //                    "</span></div></div></div></div>"
+        //                )
+
+        //                //data - toggle='tooltip' data - placement='top'
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //}
+
+        function FilteredView() {
+            var catid = catId;
+            var brandid = $("#ddlbrandid").val();
+            var Modelid = null;
+            if ($("#ddlmodelid").val() != "") {
+                Modelid = $("#ddlmodelid").val();
+            } else {
+                Modelid = null;
+            }
+            var fromprice = $("#txtfromprice").val();
+            var toprice = $("#txttoprice").val();
+
+            $.ajax({
+
+                url: "/CatagorywiseSales/Filteredshow?catid=" + catid + "&braid=" + brandid + "&modid=" + Modelid + "&fromprice=" + fromprice + "&toprice=" + toprice+"&itemtype="+"old",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#txtfromprice").val("");
+                    $("#txttoprice").val("");
+                    $("#loaditemcat").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        $("#loaditemcat").append(
+                            "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='261' width='260' src=" + data[i].Product_Image +
+                            " alt=" + data[i].ItemName + " /><div class='p_icon'><a  href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+                            "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SalesPriceAmount +
+                            "</span></div></div></div></div>"
+                        )
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+
+        function AllItemCart() {
+            $.ajax({
+
+                url: "/CatagorywiseSales/CatagoryWiseShow?id=" + 0 + "&itmtype=" + "old",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#loaditemcat").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        $("#loaditemcat").append(
+                            "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='261' width='260' src=" + data[i].Product_Image +
+                            " alt=" + data[i].ItemName + " /><div class='p_icon'><a  href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+                            "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SalesPriceAmount +
+                            "</span></div></div></div></div>"
+                        )
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+        var Itemqty = 0;
+        var ItemImg = 0;
+        function itemShortview(id) {
+            $.ajax({
+                url: "/CatagorywiseSales/ItemDetailsshortview?id=" + id,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#itmshortviewimg").empty();
+                    $("#itmshortviewimg").append(" <div><img src=" + data.Product_Image + " height='130' width='150' /></div>")
+                    $("#itmnameshow").text(data.ItemName);
+                    $("#priceshow").text(data.SO_Price);
+                    $("#unitname").text(data.UnitName);
+                    Itemqty = data.PO_QTD;
+                    ItemImg = data.Product_Image;
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+        function validateForm() {
+            var itemquantityval = $("#purqty").val();
+
+
+            var inputVal = new Array(itemquantityval);
+
+            if (inputVal[0] == "") {
+
+                showAlertreq();
+                return false;
+            }
+            else if (inputVal[0] > Itemqty) {
+
+                showAlert();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+
+
+
+        var cartlist = [];
+        $(function () {
+            if (localStorage.cartlist) {
+                cartlist = JSON.parse(localStorage.cartlist);
+
+            }
+        });
+        function AddToCart() {
+
+            if (validateForm()) {
+
+                var Itemname = $("#itmnameshow").text();
+                var Itemid = $("#priceshow").text();
+                var itemimg = ItemImg;
+
+
+                // create JavaScript Object
+                var item = {
+                    ItemName: Itemname, ItemId: Itemid, ItemImages: itemimg
+                };
+                cartlist.push(item);
+                saveCart();
+                $('#exampleModalCenter').modal('toggle');
+                alert("Item Added To Cart List");
+            }
+
+        }
+
+        function deleteItem(index) {
+            cartlist.splice(index, 1); // delete item at index
+            saveCart();
+            //$('#exampleModalCenter').modal('toggle');
+        }
+
+
+        function saveCart() {
+            if (window.localStorage) {
+                localStorage.cartlist = JSON.stringify(cartlist);
+
+            }
+        }
+
+
+
+        function showAlert() {
+            $(".alert").show('fade');
+            $("#AlertMsg").text("Stock Not Avalable");
+            $(".alert").css("display", "block");
+            setTimeout(function () {
+                $(".alert").hide('fade');
+            }, 2000);
+            return false;
+        }
+
+        function showAlertreq() {
+            $(".alert").show('fade');
+            $("#AlertMsg").text("Please Input Quantity");
+            $(".alert").css("display", "block");
+            setTimeout(function () {
+                $(".alert").hide('fade');
+            }, 2000);
+            return false;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //$(document).ready(function () {
+        //    loadCatagory();
+        //    AllCatagoryWiseCart();
+
+        //})
+
+        //function loadCatagory() {
+        //    $.ajax({
+
+        //        url: "/CatagorywiseSales/CatagoryLoad?itmtype=" + "old",
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            for (var i = 0; i < data.length; i++) {
+        //                $("#myid").append(
+        //                    "<li><a onclick='CatagoryWiseCart(" + data[i].CategoryId + ")'>" + data[i].CategoryName + "</a></li>"
+        //                )
+
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+
+        //}
+
+        //function CatagoryWiseCart(id) {
+        //    $.ajax({
+
+        //        url: "/CatagorywiseSales/CatagoryWiseShow?id=" + id + "&itmtype=" + "old",
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#loaditemcat").empty();
+        //            for (var i = 0; i < data.length; i++) {
+        //                $("#loaditemcat").append(
+        //                    "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='250' width='350' src=" + data[i].Product_Image +
+        //                    " alt=" + data[i].ItemName + " /><div class='p_icon'><a href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' data-toggle='tooltip' data-placement='top' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' title='Cart' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+        //                    "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SO_Price +
+        //                    "</span></div></div></div></div>"
+        //                )
+        //                //data - toggle='tooltip' data - placement='top'
+        //            }
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //}
+        //function AllCatagoryWiseCart() {
+        //    $.ajax({
+
+        //        url: "/CatagorywiseSales/CatagoryWiseShow?id=" + 0 + "&itmtype=" + "old",
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            //console.log(data);
+        //            $("#loaditemcat").empty();
+        //            for (var i = 0; i < data.length; i++) {
+        //                $("#loaditemcat").append(
+        //                    "<div class='col-lg-4 col-md-6'><div class='single-product'><div class='product-img'><img class='card-img' height='250' width='350' src=" + data[i].Product_Image +
+        //                    " alt=" + data[i].ItemName + " /><div class='p_icon'><a  href='/EcommerceitemDetails/Index/" + data[i].Inv_Details_ID + "' title='Details'><i class='ti-eye'></i></a><a href='#'><i class='ti-heart'></i></a><a href='#' onclick='itemShortview(" + data[i].Inv_Details_ID + ")' data-toggle='modal' data-target='#exampleModalCenter'><i class='ti-shopping-cart'></i></a></div></div><div class='product-btm'><a href='#' class='d-block'><h4>" + data[i].ItemName +
+        //                    "</h4></a><div class='mt-3'><span class='mr-4'>৳:" + data[i].SO_Price +
+        //                    "</span></div></div></div></div>"
+        //                )
+        //            }
+
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+        //}
+
+        //var Itemqty = 0;
+        //var ItemImg = 0;
+        //function itemShortview(id) {
+        //    $.ajax({
+        //        url: "/CatagorywiseSales/ItemDetailsshortview?id=" + id,
+        //        type: "Get",
+        //        contentType: "application/json;charset=utf-8",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            console.log(data);
+        //            $("#itmshortviewimg").empty();
+        //            $("#itmshortviewimg").append(" <div><img src=" + data.Product_Image + " height='130' width='150' /></div>")
+        //            $("#itmnameshow").text(data.ItemName);
+        //            $("#priceshow").text(data.SO_Price);
+        //            $("#unitname").text(data.UnitName);
+        //            Itemqty = data.PO_QTD;
+        //            ItemImg = data.Product_Image;
+
+        //        },
+        //        error: function (errormessage) {
+        //            //alert(errormessage.responseText);
+        //        }
+
+        //    });
+
+        //}
+
+        //function validateForm() {
+        //    var itemquantityval = $("#purqty").val();
+
+
+        //    var inputVal = new Array(itemquantityval);
+
+        //    if (inputVal[0] == "") {
+
+        //        showAlertreq();
+        //        return false;
+        //    }
+        //    else if (inputVal[0] > Itemqty) {
+
+        //        showAlert();
+        //        return false;
+        //    }
+        //    else {
+        //        return true;
+        //    }
+        //}
+
+
+
+
+
+        //var cartlist = [];
+        //$(function () {
+        //    if (localStorage.cartlist) {
+        //        cartlist = JSON.parse(localStorage.cartlist);
+
+        //    }
+        //});
+        //function AddToCart() {
+
+        //    if (validateForm()) {
+
+        //        var Itemname = $("#itmnameshow").text();
+        //        var Itemid = $("#priceshow").text();
+        //        var itemimg = ItemImg;
+
+
+        //        // create JavaScript Object
+        //        var item = {
+        //            ItemName: Itemname, ItemId: Itemid, ItemImages: itemimg
+        //        };
+        //        cartlist.push(item);
+        //        saveCart();
+        //        $('#exampleModalCenter').modal('toggle');
+        //        alert("Item Added To Cart List");
+        //    }
+
+        //}
+
+        //function deleteItem(index) {
+        //    cartlist.splice(index, 1); // delete item at index
+        //    saveCart();
+        //    //$('#exampleModalCenter').modal('toggle');
+        //}
+
+
+        //function saveCart() {
+        //    if (window.localStorage) {
+        //        localStorage.cartlist = JSON.stringify(cartlist);
+
+        //    }
+        //}
+
+
+
+        //function showAlert() {
+        //    $(".alert").show('fade');
+        //    $("#AlertMsg").text("Stock Not Avalable");
+        //    $(".alert").css("display", "block");
+        //    setTimeout(function () {
+        //        $(".alert").hide('fade');
+        //    }, 2000);
+        //    return false;
+        //}
+
+        //function showAlertreq() {
+        //    $(".alert").show('fade');
+        //    $("#AlertMsg").text("Please Input Quantity");
+        //    $(".alert").css("display", "block");
+        //    setTimeout(function () {
+        //        $(".alert").hide('fade');
+        //    }, 2000);
+        //    return false;
+        //}
+        //                                  //function Detailsview(id) {
+
+
+                                                    //    //$.post('/EcommerceitemDetails/Details/' + id);
+                                                    //    window.location.href = '/EcommerceitemDetails/Details/' + id;
+                                                    //    //window.location = '/EcommerceitemDetails/ItemDetails/' + id;
+                                                    //}
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+}
+
+

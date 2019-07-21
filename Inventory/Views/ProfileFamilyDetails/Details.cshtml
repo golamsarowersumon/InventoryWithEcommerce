@@ -1,0 +1,23 @@
+﻿@model Domain.ViewModels.ProfileViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h4>Profile Family Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpouseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpouseName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileDetailsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

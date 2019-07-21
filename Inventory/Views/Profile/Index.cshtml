@@ -1,0 +1,434 @@
+﻿@model IEnumerable<Domain.ViewModels.ProfileViewModel>
+   
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+
+<div class="col-lg-12">
+    <h2 class="page-header">Tabbed Services</h2>
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active">
+            <a data-toggle="tab" href="#service-one">Profile Information</a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" href="#service-two">Profile Family Information</a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" href="#service-three">Profession Information</a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" href="#service-four">Education Information</a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" href="#service-five">Service Five</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div id="service-one" class="tab-pane fade active in">
+            @*<i class="fa fa-gear pull-left fa-4x"></i>*@
+
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+
+            <div class="container">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+
+                        <div class="panel-title">Profile Information</div>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ProfileName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FatherName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MotherName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DateofBirth)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.BirthPlace)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.BloodGroupId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Genderid)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MaritalStatusId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NationalityID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.RegionId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DateofMarriage)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.TIN)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SpouseName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SpouseProfession)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MailAddress)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ContactNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.EmergencyContactNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PassportNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DrivingLicenceNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Hobby)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateBy)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.UpdateBy)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.UpdateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PresentAddressFull)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PrePostOfficeName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PrePoliceStationName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PreDistrictName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PreDivisionName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PreCountryName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PermanentAddressFull)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PerPostOfficeName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PerPoliceStationName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PerDistrictName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PerDivisionName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PerCountryName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ImagePath)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ProfileName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FatherName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MotherName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DateofBirth)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BirthPlace)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BloodGroupName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.GenderName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MaritalStatusName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NationalityName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RegionName)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DateofMarriage)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TIN)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SpouseName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SpouseProfession)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MailAddress)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ContactNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.EmergencyContactNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PassportNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DrivingLicenceNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Hobby)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CreateBy)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CreateDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UpdateBy)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UpdateDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PresentAddressFull)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PrePostOfficeName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PrePoliceStationName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PreDistrictName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PreDivisionName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PreCountryName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PermanentAddressFull)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PerPostOfficeName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PerPoliceStationName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PerDistrictName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PerDivisionName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PerCountryName)
+                                        </td>
+                                        <td>
+                                            @if (item.ImagePath != null)
+                                            {
+                                                <img src="@Url.Content(item.ImagePath)" height="100" width="100" />
+
+                                            }
+                                            else
+                                            {
+                                                <img src="" height="100" width="100" />
+
+                                            }
+
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Edit",new {id = item.ProfileId})" title="Edit Category" class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                                            <a href="@Url.Action("Details",new { id = item.ProfileId})" title="Details Category" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                            <a href="@Url.Action("Delete",new { id = item.ProfileId})" title="Delete Category" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+
+
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div id="service-two" class="tab-pane fade">
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProfileId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SpouseName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SpouseDOB)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SpouseProfession)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SpouseGenderId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SlNoOfMarriage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ChildName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ChildDOB)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ChildProfession)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Genderid)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.SlNoOfChild)
+                    </th>
+
+                    <th>Options</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProfileId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SpouseName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SpouseDOB)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SpouseProfession)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SpouseGenderId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SlNoOfMarriage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ChildName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ChildDOB)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ChildProfession)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genderid)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SlNoOfChild)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit2","Profile",new {id = item.ProfileDetailsId})" title="Edit Category" class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                            @Html.ActionLink("Details", "Details", "ProfileFamilyDetails", new { id = item.ProfileDetailsId }) |
+                            @Html.ActionLink("Delete", "Delete", "ProfileFamilyDetails", new { id = item.ProfileDetailsId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <div id="service-three" class="tab-pane fade">
+            <i class="fa fa-magic pull-left fa-4x"></i>
+            <p>Vestibulum laoreet molestie urna ac vehicula. Phasellus laoreet semper ipsum ac gravida. Sed in varius tortor. Nullam blandit in neque quis aliquet. Fusce volutpat pellentesque sem non convallis. Suspendisse sit amet magna pulvinar, gravida mauris eu, tincidunt massa. Nam lectus mi, viverra non quam nec, mollis malesuada dolor. Vivamus hendrerit nunc interdum turpis egestas, a lobortis odio consequat. Fusce posuere purus quis ligula faucibus lacinia. Curabitur sit amet congue dolor. Duis dapibus hendrerit nunc et gravida. Phasellus mollis, lectus quis ornare aliquam, arcu orci posuere lectus, vehicula bibendum sem ante quis lacus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing. Pellentesque quis tristique eros, sed rutrum mauris.</p>
+        </div>
+        <div id="service-four" class="tab-pane fade">
+            <i class="fa fa-flask pull-left fa-4x"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing. Pellentesque quis tristique eros, sed rutrum mauris.</p>
+            <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+        </div>
+        <div id="service-five" class="tab-pane fade">
+            <i class="fa fa-flag pull-left fa-4x"></i>
+            <p>Nam fringilla quis enim in eleifend. Suspendisse sed lectus mauris. Nam commodo, arcu et posuere placerat, tellus tortor dignissim eros, sit amet eleifend urna lorem sit amet nulla. Praesent sem nibh, vulputate nec congue eu, dapibus vitae augue. Suspendisse cursus urna sit amet metus porttitor, in pharetra quam feugiat. Etiam tempus euismod nulla eget pellentesque.</p>
+            <p>Vestibulum laoreet molestie urna ac vehicula. Phasellus laoreet semper ipsum ac gravida. Sed in varius tortor. Nullam blandit in neque quis aliquet. Fusce volutpat pellentesque sem non convallis. Suspendisse sit amet magna pulvinar, gravida mauris eu, tincidunt massa. Nam lectus mi, viverra non quam nec, mollis malesuada dolor. Vivamus hendrerit nunc interdum turpis egestas, a lobortis odio consequat. Fusce posuere purus quis ligula faucibus lacinia. Curabitur sit amet congue dolor. Duis dapibus hendrerit nunc et gravida. Phasellus mollis, lectus quis ornare aliquam, arcu orci posuere lectus, vehicula bibendum sem ante quis lacus.</p>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,421 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header text-uppercase">Dynamic Report</div>
+            <div class="card-body">
+                <div class="col-lg-12">
+
+                    <div class="row">
+
+                        <div class="table-responsive" style="height:200px">
+                            <table class="table table-bordered table-striped table-custom">
+                                <thead class="bgdefault">
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" class="allBomGridCheck">
+                                        </th>
+                                        <th>Table Name</th>
+                                        <th>Column Name</th>
+                                        <th>Value 1</th>
+                                        @*<th>Value 2</th>*@
+
+                                    </tr>
+                                </thead>
+                                <tbody class="BomGridContent" id="bomBody">
+                                    <tr class="BomGridFields">
+                                        <td>
+                                            <input type="checkbox" class="singleBomGridCheck">
+                                        </td>
+                                        <td>
+                                            <select id="ddltablename" class="form-control">
+                                                <option value="">select Table</option>
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="ddlcolumn" class="form-control">
+                                                <option value="">select Column</option>
+                                            </select>
+
+                                        </td>
+                                        <td>
+                                            <select id="ddlvalue1" class="form-control">
+                                                <option value="">select Value</option>
+                                            </select>
+
+                                        </td>
+                                        @*<td>
+                                            <select id="ddlvalue2" class="form-control">
+                                                <option>select Value</option>
+                                            </select>
+
+                                        </td>*@
+                                    </tr>
+
+                                    <tr class="BomGridFields">
+                                        <td>
+                                            <input type="checkbox" class="singleBomGridCheck">
+                                        </td>
+                                        <td>
+                                            <select id="ddltablename2" class="form-control">
+                                                <option value="">select Table</option>
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="ddlcolumn2" class="form-control">
+                                                <option value="">select Column</option>
+                                            </select>
+
+                                        </td>
+                                        <td>
+                                            <select id="ddlvalue12" class="form-control">
+                                                <option value="">select Value</option>
+                                            </select>
+
+                                        </td>
+                                        @*<td>
+                                            <select id="ddlvalue22" class="form-control">
+                                                <option>select Value</option>
+                                            </select>
+
+                                        </td>*@
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="btn-group">
+                            @*<button class="btn btn-md btn-success btn-save addBomGridBtn" type="button">
+                                <i class="fa fa-plus"></i> Add Row
+                            </button>
+                            <button class="btn btn-md btn-danger btn-save deleteBomGridBtn" type="button" disabled="disabled">
+                                <i class="fa fa-minus"></i> Delete Row
+                            </button>*@
+
+
+                            <button class="btn btn-md btn-primary btn-save" type="button" onclick="GetReport()">
+                                <i class="fa fa-save"></i> Add
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4" style="height:300px; background-color:palegreen">
+
+                        </div>
+                        <div class="col-lg-8" style="height:300px;background-color:blue">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+
+
+    <script>
+        $(document).ready(function () {
+            LoadTable();
+
+        });
+
+        function LoadTable() {
+            $.ajax({
+
+                url: "/DynamicReport/GetTableName",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    $("#ddltablename").empty().append("<option>Select Table</option >")
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddltablename").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+
+                        $("#ddltablename2").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+
+        }
+
+
+
+
+
+        $("#ddltablename").change(function () {
+            //alert("ok");
+            var tablename = $("#ddltablename").val();
+
+            $.ajax({
+                url: "/DynamicReport/GetColumn?tabname=" + tablename,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#ddlcolumn").empty().append("<option>Select Column</option >")
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlcolumn").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+
+
+
+        $("#ddltablename2").change(function () {
+            //alert("ok");
+            var tablename = $("#ddltablename2").val();
+
+            $.ajax({
+                url: "/DynamicReport/GetColumn?tabname=" + tablename,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#ddlcolumn2").empty().append("<option>Select Column</option >")
+                    for (var i = 0; i < data.length; i++) {
+
+                        $("#ddlcolumn2").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+
+        $("#ddlcolumn").change(function () {
+            var tablename = $("#ddltablename").val();
+            var columnname = $("#ddlcolumn").val();
+
+            $.ajax({
+                url: "/DynamicReport/GetValue?tabname=" + tablename + "&columnname=" + columnname,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+
+                    $("#ddlvalue1").empty().append("<option>Select Value</option >")
+                    for (var i = 0; i < data.length; i++) {
+
+                        if (data[i] == "/Date(1558720800000)/") {
+                            var date;
+                            if (data[i] != null) {
+                                var da = new Date(parseInt(data[i].replace("/Date(", "").replace(")/", ""), 10));
+
+
+                                var dat = JSON.stringify(da)
+                                date = dat.slice(1, 11)
+
+                            }
+                            else {
+
+                                date = null
+                            }
+
+
+                            $("#ddlvalue1").append("<option value=" + date + ">" + date + "</option>")
+                            $("#ddlvalue2").append("<option value=" + date + ">" + date + "</option>")
+
+                        }
+                        else {
+                            $("#ddlvalue1").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+                            $("#ddlvalue2").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+                        }
+                      
+
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+        $("#ddlcolumn2").change(function () {
+            var tablename = $("#ddltablename2").val();
+            var columnname = $("#ddlcolumn2").val();
+
+            $.ajax({
+                url: "/DynamicReport/GetValue?tabname=" + tablename + "&columnname=" + columnname,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    $("#ddlvalue12").empty().append("<option>Select Value</option >")
+                   
+                    for (var i = 0; i < data.length; i++) {
+
+                        if (data[i] == "/Date(1558720800000)/") {
+                            var date;
+                            if (data[i] != null) {
+                                var da = new Date(parseInt(data[i].replace("/Date(", "").replace(")/", ""), 10));
+
+
+                                var dat = JSON.stringify(da)
+                                date = dat.slice(1, 11)
+
+                            }
+                            else {
+
+                                date = null
+                            }
+
+
+                            $("#ddlvalue12").append("<option value=" + date + ">" + date + "</option>")
+                           
+
+                        }
+                        else {
+                            $("#ddlvalue12").append("<option value=" + data[i] + ">" + data[i] + "</option>")
+                        }
+
+
+
+                       
+                    }
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        })
+
+        function GetReport() {
+            var tablename = $("#ddltablename").val();
+            var columnname = $("#ddlcolumn").val();
+            var columnname2 = $("#ddlcolumn2").val();
+            var value1 = $("#ddlvalue1").val();
+            var value2 = $("#ddlvalue12").val();
+            $.ajax({
+                url: "/DynamicReport/GetReport?tabname=" + tablename + "&column1=" + columnname + "&Column2=" + columnname2 + "&value1=" + value1 + "&value2=" + value2,
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+
+
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+
+
+
+
+            //    $(document).on('click', '.addBomGridBtn', function () {
+            //        var markUp = $('.BomGridFields:eq( 0 )').clone();
+            //        $('.BomGridContent').append(markUp).find(".BomGridFields:eq( -1 ) input[type='text'] ,.BomGridFields:eq( -1 ) select option:contains('Please select one')").val('').prop('selected', true);
+            //        var rowNumber = $('#bomBody tr').length;
+            //        $('#RowNumber').val(rowNumber);
+            //});
+
+
+            //       $(document).on('click', '.deleteBomGridBtn', function () {
+
+            //    if (confirm('Are you sure to delete this record?') == true) {
+
+            //        $('.BomGridContent input:checkbox:checked').each(function () {
+
+            //            if ($('.allBomGridCheck').is(':checked')) {
+
+
+            //                $(this).parents('.BomGridContent').find('.BomGridFields:gt( 0 )').remove();
+            //                $('input[type="checkbox"]').prop('checked', false);
+            //            } else {
+
+
+            //                $(this).parents('.BomGridFields').remove();
+            //                $(this).parents('.BomGridContent').find('.BomGridFields:gt( 0 )').remove();
+            //            }
+            //        });
+
+            //        return;
+            //    }
+            //});
+
+
+
+
+
+            ////Row select or check
+            //$(document).on('click', '.allBomGridCheck', function () {
+            //    if (this.checked) {
+            //        $('.BomGridContent input:checkbox').prop('checked', true);
+            //    }
+            //    else {
+            //        $('.BomGridContent input:checkbox').prop('checked', false);
+            //    }
+            //});
+            //$(document).on('click', '.singleBomGridCheck', function () {
+            //    if ($('.singleBomGridCheck:checked').length == $('.singleBomGridCheck').length) {
+            //        $('.allBomGridCheck:checkbox').prop('checked', true);
+            //    } else {
+            //        $('.allBomGridCheck:checkbox').prop('checked', false);
+            //    }
+            //});
+            ////Enable or Disable Delete Button
+            //$(document).on('click', '.allBomGridCheck, .singleBomGridCheck', function (event) {
+            //    if ($(event.target).is(':checked')) {
+            //        $('.deleteBomGridBtn').prop('disabled', false);
+            //    }
+            //    if ($('.singleBomGridCheck').length == $('.singleBomGridCheck:checkbox:not(":checked")').length) {
+            //        $('.deleteBomGridBtn').prop('disabled', true);
+            //    }
+            //});
+    </script>
+}

@@ -1,0 +1,36 @@
+﻿@model Domain.ViewModels.CelebrationViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CelebrationViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CelebrationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CelebrationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CelebrationType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CelebrationType)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CelebrationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

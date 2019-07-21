@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Domain.ViewModels.SubSubSubSubStoreViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubSubSubStoreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubStoreId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubStoreId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubSubStoreId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubSubSubStoreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubStoreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubStoreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubSubStoreName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubSubSubSubStoreId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SubSubSubSubStoreId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SubSubSubSubStoreId })
+        </td>
+    </tr>
+}
+
+</table>

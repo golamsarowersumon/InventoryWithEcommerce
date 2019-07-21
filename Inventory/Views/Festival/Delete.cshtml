@@ -1,0 +1,66 @@
+﻿@model Domain.ViewModels.FestivalViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Delete Festival Record</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-md-offset-2" style="margin-top:15px;">
+                        <table class="table table-responsive table-hover">
+                            <tr>
+
+                                <th>@Html.DisplayNameFor(model => model.FestivalId)</th>
+                                <td>@Html.DisplayFor(model => model.FestivalId)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.FestivalName)</th>
+                                <td>@Html.DisplayFor(model => model.FestivalName)</td>
+
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.ReligionName)</th>
+                                <td>@Html.DisplayFor(model => model.ReligionName)</td>
+
+                            </tr>
+
+
+                        </table>
+                        <div class="col-md-12">
+
+                            <p>Are you sure you want to delete this? Click on delete button..</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2" style="margin-top:15px;">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Delete" class="btn btn-default" />
+                                <a href="@Url.Action("Index", "Religion")" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@model Domain.ViewModels.MenuViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MenuViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.SubMenuName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubMenuName)
+        </dd>
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubMenuId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubMenuId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubMenuName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubMenuName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubMenuURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubMenuURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.SubMenuId}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

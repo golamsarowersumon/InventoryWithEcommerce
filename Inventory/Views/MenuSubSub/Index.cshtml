@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Domain.ViewModels.MenuViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+       
+      
+        
+        <th>
+            @Html.DisplayNameFor(model => model.SubMenuName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubMenuName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubSubMenuURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+      
+        
+       
+       
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.SubMenuName)
+        </td>
+      
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubMenuName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSubMenuURL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubSubMenuId}) |
+            @Html.ActionLink("Details", "Details", new {id=item.SubSubMenuId }) |
+            @Html.ActionLink("Delete", "Delete", new {id=item.SubSubMenuId })
+        </td>
+    </tr>
+}
+
+</table>

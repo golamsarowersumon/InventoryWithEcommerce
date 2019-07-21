@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<div class="col-lg-offset-1">
+    <div class="table-responsive">
+
+        <table class="table table-bordered" id="tbl">
+            <thead>
+                <tr>
+                    <th>Procure Id</th>
+                    <th>Store Name</th>
+                    <th>Catagory Name</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th>Total</th>
+                    <th>Dis Rate</th>
+                    <th>Dis Amt</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Amt</th>
+                    <th>Grand Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            loalProcurement();
+
+        })
+
+
+
+        function loalProcurement() {
+            $.ajax({
+                url: "/ShowProcurement/GetAllProcurement",
+                type: "Get",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (i, v) {
+                        $("#tbl tbody").append(
+                            "<tr><td>" + v.PO_HD_ID + "</td><td>" + v.StoreName + "</td><td>" + v.CategoryName + "</td><td>" + v.ItemName + "</td><td>" + v.PO_Price + "</td><td>"
+                            + v.PO_QTD + "</td><td>" + v.PO_SubTotal + "</td><td>" + v.PO_TOTAL_AMT + "</td><td>" + v.PO_DIS_RATE + "</td><td>" + v.PO_DIS_AMT + "</td><td>" + v.PO_Tax_Rate + "</td><td>"
+                            + v.PO_Tax_AMT + "</td><td>" + v.PO_GRAND_TOTAL+ "</td></tr>"
+
+                        )
+                    })
+                },
+                error: function (errormessage) {
+                    //alert(errormessage.responseText);
+                }
+
+            });
+        }
+
+    </script>
+
+}
+
+
+

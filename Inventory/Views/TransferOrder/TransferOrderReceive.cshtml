@@ -1,0 +1,210 @@
+﻿@model  Domain.ViewModels.TransferOrderViewModel
+@{
+    ViewBag.Title = "TransferOrderReceive";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    if (TempData.ContainsKey("OperationMessage") && !string.IsNullOrWhiteSpace(TempData["OperationMessage"].ToString()))
+    {
+        //vMessage = TempData["OperationMessage"].ToString();
+        <script type="text/javascript">
+            window.onload = function () {
+
+                 alert('@TempData["OperationMessage"]');
+            };
+        </script>
+    }
+
+
+
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+  
+ <div class="row">
+     <p>@Session["strUserRole"]</p>
+     <p>@Session["strStoreId"]</p>
+     @if (TempData["message"] != null)
+     {
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <div class="alert-icon">
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="alert-message">
+                    <span>@TempData["message"]</span>
+                </div>
+            </div>
+        </div>
+     }
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+           <div class="panel panel-success">
+               <div class="panel-heading">
+                   <div class="panel-title">Receive Order</div>
+               </div>
+
+
+               <div class="row" style="padding:5px 15px 5px 15px;">
+                   <div class="col-md-12 col-lg-12 col-sm-12 " >
+                       <span class="panel-title">
+                           Showing @Model.TransferOrderList.Count Record
+
+
+                           <button class="btn btn-md btn-info pull-right" type="submit" name="cancel" value="Cancel"
+                                   formaction="CancelForm" formmethod="post" id="btnCancel" disabled="disabled">
+                               <i class="fa fa-save"></i> Cancel
+                           </button>
+                           <button class="btn btn-md btn-info pull-right" ttype="submit" name="save" value="Save"
+                                   formaction="SaveForm" formmethod="post" id="btnReceive" disabled="disabled">
+                               <i class="fa fa-save"></i> Receive
+                           </button>
+                       </span>
+                   </div>
+               </div>
+               <div class="panel-body">
+
+
+
+    @if (Model.TransferOrderList.Any())
+    {
+        
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th><input type="checkbox" class="allGridCheck"></th>
+                                                <th style="display:none">Id</th>
+                                                <th>From Store</th>
+                                                <th>Item Name</th>
+                                                <th>Quantity</th>
+
+                                                <th>Unit</th>
+                                                <th>Transfer Type</th>
+                                                <th>Transfer date</th>
+
+                                            </tr>
+                                        </thead> 
+                                        <tbody class="GridContent" id="GridBody">
+
+                                            @for (int i = 0; i < Model.TransferOrderList.Count; i++)
+                                            {
+
+                                                <tr class="GridFields">
+                                                    <td>@Html.CheckBoxFor(m => m.TransferOrderList[i].IsChecked, new { @class = "singleGridCheck" })</td>
+
+                                                    <td style="display:none">@Html.HiddenFor(m => m.TransferOrderList[i].TransferOrderId, new { @Value = @Model.TransferOrderList[i].TransferOrderId })</td>
+                                                   
+                                                    <td>
+                                                        @Model.TransferOrderList[i].FromStoreName
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferOrderList[i].ItemName
+                                                     </td>
+
+                                                    <td>
+                                                        @Model.TransferOrderList[i].TransactionQuantity
+                                                     
+                                                    <td>
+                                                        @Model.TransferOrderList[i].UnitName
+                                                      
+                                                    </td>
+
+                                                    <td>
+                                                        @Model.TransferOrderList[i].TransferTypeName
+                                                      
+                                                    </td>
+                                                    <td>
+                                                        @Model.TransferOrderList[i].TransferOrderdate
+                                                      
+                                                    </td>
+                                                 </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+    }
+
+
+     </div>
+
+
+   </div>
+
+
+
+  </div>
+
+ </div>
+
+} 
+
+
+
+
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            var btnName = localStorage.getItem("btnName");
+            if (btnName) {
+                $('.btn-save').html('<i class="fa fa-edit"></i> ' + btnName);
+                localStorage.removeItem("btnName");
+            }
+            $(".btn-edit").click(function () {
+                localStorage.setItem("btnName", "Update");
+            });
+
+            $(document).on('click', '.allGridCheck, .singleGridCheck', function (event) {
+                if ($(event.target).is(':checked')) {
+                    $('#btnCancel').prop('disabled', false);
+                    $('#btnReceive').prop('disabled', false);
+                }
+                if ($('.singleGridCheck').length === $('.singleGridCheck:checkbox:not(":checked")').length) {
+                    $('#btnCancel').prop('disabled', true);
+                    $('#btnReceive').prop('disabled', true);
+                }
+            });
+
+
+            var vForm = $('#__AjaxAntiForgeryForm');
+            var vToken = $('input[name="__RequestVerificationToken"]', vForm).val();
+
+            
+
+
+        });
+
+
+        $(document).on('click', '.allGridCheck', function () {
+            if (this.checked) {
+                $('.GridContent input:checkbox').prop('checked', true);
+            } else {
+                $('.GridContent input:checkbox').prop('checked', false);
+            }
+        });
+
+        $(document).on('click', '.singleGridCheck', function () {
+            if ($('.singleGridCheck:checked').length === $('.singleGridCheck').length) {
+                $('.allGridCheck:checkbox').prop('checked', true);
+            } else {
+                $('.allGridCheck:checkbox').prop('checked', false);
+            }
+        });
+
+
+
+
+
+
+
+
+    </script>
+}

@@ -1,0 +1,43 @@
+﻿@model Domain.ViewModels.SubSubStoreViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubSubStoreViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSubStoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSubStoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubStoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubStoreName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubSubStoreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

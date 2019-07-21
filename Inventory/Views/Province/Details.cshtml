@@ -1,0 +1,62 @@
+﻿@model Domain.ViewModels.ProvinceViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Details of Province Record</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="col-md-8 col-md-offset-2" style="margin-top:15px;">
+                        <table class="table table-responsive table-hover">
+                            <tr>
+
+                                <th>@Html.Label("Province ID", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.ProvinceID)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.Label("Province Name", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.ProvinceName)</td>
+
+                            </tr>
+
+                            <tr>
+                                <th>@Html.Label("Country Name", htmlAttributes: new { @class = "control-label" })</th>
+                                <td>@Html.DisplayFor(model => model.CountryName)</td>
+
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <div class="form-actions no-color">
+                            <a href="@Url.Action("Edit", "Province")" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span> Edit
+                            </a>
+                            <a href="@Url.Action("Index", "Province")" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

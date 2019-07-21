@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Domain.ViewModels.ProfileViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfileId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpouseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpouseDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpouseProfession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpouseGenderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SlNoOfMarriage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChildName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChildDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChildProfession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genderid)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.SlNoOfChild)
+        </th>
+       
+        <th>Options</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfileId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpouseDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpouseProfession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpouseGenderId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SlNoOfMarriage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildProfession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genderid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SlNoOfChild)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProfileDetailsId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProfileDetailsId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProfileDetailsId })
+        </td>
+    </tr>
+    }
+
+</table>

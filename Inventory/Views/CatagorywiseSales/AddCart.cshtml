@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "AddCart";
+    Layout = "~/Views/Shared/_InitialLayout.cshtml";
+}
+
+
+<section class="checkout_area section_gap">
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-lg-8">
+
+
+                <div class="card" style="text-align:center;background:#f6f6f6;color:black;font-size:30px;">
+                    <div class="card-body">
+                        Cart List
+                    </div>
+                </div>
+
+                <div class="table-responsive" style="height:350px;">
+                    <table id="tblcartlist" class="table table-bordered" style="color:black;">
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Item Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Subtotal</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carbody"></tbody>
+                    </table>
+                </div>
+                <div class="card" style="text-align:center;background:#f6f6f6;">
+                    <div class="card-footer">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4" style="margin-top:90px;">
+                <div class="order_box">
+
+                    <div class="button-group-area mt-40">
+                        <a href="/CatagorywiseSales/Index" class="genric-btn success medium">Continue Shopping</a>
+                        <a href="/CatagorywiseSales/CheckOut" class="genric-btn success medium">Check Out</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+            showCart();
+
+        })
+
+
+        var cartlist = [];
+        $(function () {
+            if (localStorage.cartlist) {
+                cartlist = JSON.parse(localStorage.cartlist);
+
+            }
+        });
+
+        function showCart() {
+
+            var size = JSON.parse(localStorage['cartlist']);
+            $("#tblcartlist tbody").empty();
+
+
+            $.each(size, function (i, v) {
+                $("#tblcartlist tbody").append(
+                    "<tr><td><img src=" + v.ItemImages + " alt='' height='40' width='60' /></td><td>" + v.ItemName + "</td><td><input name='cartqty' type='text' value=" + v.ItemQuantity + " /></td><td>" + v.SoPrice + "</td><td>" + v.ItemQuantity * v.SoPrice + "</td><td><button onclick='update(" + v.ItemId+','+i + ")'>Update</button><button onclick='deleteItem(" + i + ")'>Remove</button></td></tr>"
+
+
+                );
+            })
+        }
+
+        //function update(itemid, index) {
+        //    var InvDetailsId = 0;
+        //    InvDetailsId = $(this).closest('tr').find(':input').index(index);
+        //    alert(InvDetailsId);
+        //    var itemqty = null;
+        //    itemqty = $("#cartqty").eq(index).val();
+        //    alert(itemqty);
+        //    for (var i in cartlist) {
+        //        if (cartlist[i].ItemId == itemid) {
+        //            cartlist[i].ItemQuantity = itemqty;
+                    
+        //            saveCart();
+        //            showCart();
+        //            return;
+        //        }
+        //    }
+        //}
+
+
+        function deleteItem(index) {
+            cartlist.splice(index, 1); // delete item at index
+            saveCart();
+            showCart();
+
+        }
+
+
+        function saveCart() {
+            if (window.localStorage) {
+                localStorage.cartlist = JSON.stringify(cartlist);
+
+            }
+        }
+
+
+    </script>
+
+
+
+}

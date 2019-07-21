@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Domain.ViewModels.PoliceStationViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.District.DistrictName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliceStationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DistrictName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.District.DistrictName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliceStationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DistrictName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PoliceStationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PoliceStationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PoliceStationId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,520 @@
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\Core.dll.config
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\Core.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\Core.pdb
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\EntityFramework.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\EntityFramework.xml
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\obj\Release\Core.dll
+F:\Z And Z Solution\Inventory Management System\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\Inventory Management System\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Inventory Management System\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Inventory Management System\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\Inventory Management System\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\18.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\18.05.19\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\18.05.19\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\18.05.19\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\18.05.19\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\18.05.19\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\18.05.2019 Update\Inventory\Core\obj\Release\Core.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Core.dll.config
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Core.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Core.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Domain.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Domain.pdb
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\Domain.dll.config
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\obj\Release\Core.dll
+E:\Shakil Personal work in ZZ\19\18.05.2019 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\20.05.2019 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\22.05.2019 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\25.05.2019\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\25.05.2019 Update\25.05.2019\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\26.05.19\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\26.05.19\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\26.05.19\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\26.05.19\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\26.05.19\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\26.05.19 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\27.05.19 Update\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\28.05.2019\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\29.05.19\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\30.05.19\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\30.05.19\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\30.05.19\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\30.05.19\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\30.05.19\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\30.05.2019 Update\30.05.19\Inventory\Core\obj\Release\Core.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\User\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.dll.config
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Core.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Owin.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Domain.dll.config
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Microsoft.Owin.Security.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.dll
+C:\Users\netsh\Desktop\02-06-2019\Inventory\Core\obj\Release\Core.pdb

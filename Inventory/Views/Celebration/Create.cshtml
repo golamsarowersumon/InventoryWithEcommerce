@@ -1,0 +1,148 @@
+﻿@model Domain.ViewModels.CelebrationViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12">
+
+            <div class="panel panel-info card-2 mt">
+
+
+                <div class="panel-heading">
+                    <div class="panel-title">Celebration Entry</div>
+
+
+                </div>
+
+                <div class="panel-body">
+
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="col-md-10 col-md-offset-1" style="margin-top:15px;">
+
+                                <div class="form-group">
+                                    @Html.Label("Celebration Name", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.CelebrationName, new { htmlAttributes = new { @class = "form-control col-md-12", @placeholder = "Please Enter Celebration Name" } })
+                                        @Html.ValidationMessageFor(model => model.CelebrationName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+
+
+                                    @*<div class="col-md-3 col-md-offset-4">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="National" id="National" value="yes" onClick="uncheck(1)">
+                                            <label class="form-check-label" for="National">
+                                                National
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="International" id="International" value="yes" onClick="uncheck(2)">
+                                            <label class="form-check-label" for="International">
+                                                International
+                                            </label>
+                                        </div>
+                                    </div>*@
+
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.CelebrationType, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+
+                                            <div class="col-md-5">
+                                   
+                                                @Html.RadioButtonFor(model => model.CelebrationType, "National")
+                                                @Html.Label("National", htmlAttributes: new { @class = "control-label" })
+                                                </div>
+                                            <div class="col-md-6">
+                                               
+                                                @Html.RadioButtonFor(model => model.CelebrationType, "International")
+                                                @Html.Label("International", htmlAttributes: new { @class = "control-label" })
+                                                </div>
+                                            </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-4 col-md-8">
+                                        <input type="submit" value="Create" class="btn btn-default" />
+                                        <a href="@Url.Action("Index", "Celebrations")" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-arrow-left"></span> Go Back
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+
+                        </div>
+                    }
+
+
+                    
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+@*<script>
+        function checkRefresh(value) {
+            document.form1.submit();
+        }
+
+        function uncheck(check) {
+            var prim = document.getElementById("National");
+            var secn = document.getElementById("International");
+            if (prim.checked == true && secn.checked == true) {
+                if (check == 1) {
+                    secn.checked = false;
+                    checkRefresh();
+                }
+                else if (check == 2) {
+                    prim.checked = false;
+                    checkRefresh();
+                }
+            }
+
+        }
+</script>*@
+}
